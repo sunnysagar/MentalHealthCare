@@ -262,6 +262,18 @@
                             android:text="less"
                             android:textColor="@color/task_text_color"/>
 
+                        <TextView
+                            android:id="@+id/exp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text="Explore more.."
+                            android:layout_gravity="center"
+                            android:textSize="16sp"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="@font/aladin"
+                            android:textColor="@color/task_text_color"/>
+
 
                     </LinearLayout>
 

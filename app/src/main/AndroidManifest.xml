@@ -21,23 +21,25 @@
         android:theme="@style/Theme.MY"
         tools:targetApi="31">
         <activity
-            android:name="com.sunny.mentalhealthcare.activity.PlaceActivity"
+            android:name="com.sunny.mentalhealthcare.music.SongsActivity"
             android:exported="false"
             android:theme="@style/NoActionBar"/>
         <activity
-            android:name="com.sunny.mentalhealthcare.activity.MusicActivity"
+            android:name="com.sunny.mentalhealthcare.music.AlbumActivity"
             android:exported="false"
             android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.sunny.mentalhealthcare.activity.PlaceActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar" />
         <activity
             android:name="com.sunny.mentalhealthcare.activity.MoviesActivity"
             android:exported="false"
-            android:theme="@style/NoActionBar"/>
+            android:theme="@style/NoActionBar" />
         <activity
             android:name="com.sunny.mentalhealthcare.activity.YogaActivity"
             android:exported="true"
-            android:theme="@style/AppTheme">
-
-        </activity>
+            android:theme="@style/AppTheme" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -56,15 +58,12 @@
             android:name="com.sunny.mentalhealthcare.activity.SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.Splash">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
         <activity
             android:name="com.sunny.mentalhealthcare.activity.TrialActivity"
             android:exported="true"

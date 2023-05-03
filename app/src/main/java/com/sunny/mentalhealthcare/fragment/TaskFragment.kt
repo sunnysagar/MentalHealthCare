@@ -1,6 +1,7 @@
 package com.sunny.mentalhealthcare.fragment
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import android.widget.LinearLayout
 import android.widget.TableLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.sunny.mentalhealthcare.music.AlbumActivity
 import com.sunny.mentalhealthtracker.R
 
 
@@ -21,6 +23,7 @@ class TaskFragment : Fragment() {
     lateinit var musicMore:TextView
     lateinit var musicBenefit:LinearLayout
     lateinit var musicLess:TextView
+    lateinit var musicExp:TextView
 
     lateinit var moviesMore:TextView
     lateinit var movieBenefit:LinearLayout
@@ -96,6 +99,7 @@ class TaskFragment : Fragment() {
         musicMore = view.findViewById(R.id.musicMore)
         musicBenefit = view.findViewById(R.id.musicBenefit)
         musicLess = view.findViewById(R.id.musicClose)
+        musicExp = view.findViewById(R.id.exp1)
 
         moviesMore = view.findViewById(R.id.movieMore)
         movieBenefit = view.findViewById(R.id.movieBenefit)
@@ -163,6 +167,9 @@ class TaskFragment : Fragment() {
         musicLess.setOnClickListener {
             musicBenefit.visibility = View.GONE
             musicMore.visibility = View.VISIBLE
+        }
+        musicExp.setOnClickListener {
+            startActivity(Intent(activity,AlbumActivity::class.java))
         }
 
         moviesMore.setOnClickListener {
