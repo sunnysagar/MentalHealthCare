@@ -1,0 +1,1581 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.sunny.mentalhealthcare.fragment.TaskFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/depression_Def"
+        android:fontFamily="@font/tienne_bold"
+        android:layout_margin="11dp"
+        android:textSize="16dp"
+        android:padding="6dp"
+        android:textColor="#00134A"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:padding="6dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tasks  &amp; Activities "
+                android:gravity="center_horizontal"
+                android:textSize="25dp"
+                android:fontFamily="@font/abril_fatface"
+                android:textColor="#E80202"/>
+
+            <View
+                android:id="@+id/lineV"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/title"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="-2dp"
+                android:layout_marginEnd="20dp"
+                android:background="#E80202"
+                android:gravity="center_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/wrkLL"
+                android:layout_below="@id/lineV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/wrkRl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="51dp"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/wrk"
+                        android:layout_width="205dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/alatsi"
+                        android:layout_marginStart="12dp"
+                        android:padding="3dp"
+                        android:text="Keep involve yourself in the work\n whatever you like."
+                        android:minLines="2"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/wrkMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/wrk"
+                        android:layout_marginStart="112dp"
+                        android:layout_marginTop="-12dp"
+                        android:fontFamily="@font/alatsi"
+                        android:gravity="center"
+                        android:text="more..."
+                        android:visibility="visible"
+                        android:textColor="@color/task_text_color" />
+
+                    <LinearLayout
+                        android:id="@+id/wrkBenefit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_below="@id/wrkMore">
+
+                        <TextView
+                            android:id="@+id/iE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="1.Increased Energy"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:id="@+id/iEe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="2. More Productivity"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:id="@+id/iEee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="3.Improved Creativity"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:id="@+id/iEeee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="4. Mental Alertness"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:id="@+id/iEeeee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="5. Staying Positive"
+                            android:textColor="#270121"/>
+
+                        <TextView
+                            android:id="@+id/wrkClose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="41dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/alatsi"
+                            android:text="less"
+                            android:textColor="@color/task_text_color"/>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/work_white">
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/musicLL"
+                android:layout_below="@id/wrkLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp">
+
+                <RelativeLayout
+                    android:id="@+id/musicRl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="51dp"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/music"
+                        android:layout_width="205dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/alatsi"
+                        android:layout_marginStart="12dp"
+                        android:padding="3dp"
+                        android:text="Listening music is one the best \n brain workout."
+                        android:minLines="2"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/musicMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/music"
+                        android:layout_marginStart="112dp"
+                        android:layout_marginTop="-12dp"
+                        android:fontFamily="@font/alatsi"
+                        android:gravity="center"
+                        android:text="more..."
+                        android:visibility="visible"
+                        android:textColor="@color/task_text_color" />
+
+                    <LinearLayout
+                        android:id="@+id/musicBenefit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_below="@id/musicMore">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="1. Reduce Anxiety"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="2. Blood Pressure"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="3.Improve Sleep Quality"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="4. Mental Alertness"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="5. Memory Power"
+                            android:textColor="#270121"/>
+
+                        <TextView
+                            android:id="@+id/musicClose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="41dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/alatsi"
+                            android:text="less"
+                            android:textColor="@color/task_text_color"/>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/music_white">
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/moviesLL"
+                android:layout_below="@id/musicLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp">
+
+                <RelativeLayout
+                    android:id="@+id/movieRl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="51dp"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/movie"
+                        android:layout_width="205dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/alatsi"
+                        android:layout_marginStart="12dp"
+                        android:padding="3dp"
+                        android:text="watching movies is a best way to \n be distracted."
+                        android:minLines="2"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/movieMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/movie"
+                        android:layout_marginStart="112dp"
+                        android:layout_marginTop="-12dp"
+                        android:fontFamily="@font/alatsi"
+                        android:gravity="center"
+                        android:text="more..."
+                        android:visibility="visible"
+                        android:textColor="@color/task_text_color" />
+
+                    <LinearLayout
+                        android:id="@+id/movieBenefit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_below="@id/movieMore">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="1. Stress Reduction"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="2. Emotional Intelligence"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="3.Social Connectivity"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="4. Mental Alertness"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="5. Anxiety Loss"
+                            android:textColor="#270121"/>
+
+                        <TextView
+                            android:id="@+id/movieClose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="41dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/alatsi"
+                            android:text="less"
+                            android:textColor="@color/task_text_color"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/movies_white">
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/comedyLL"
+                android:layout_below="@id/moviesLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp">
+
+                <RelativeLayout
+                    android:id="@+id/comedyRl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="51dp"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/comedy"
+                        android:layout_width="205dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/alatsi"
+                        android:layout_marginStart="12dp"
+                        android:padding="3dp"
+                        android:text="watching comedy shows is a good way to be distracted from tensions."
+                        android:minLines="2"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/comedyMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/comedy"
+                        android:layout_marginStart="112dp"
+                        android:layout_marginTop="-12dp"
+                        android:fontFamily="@font/alatsi"
+                        android:gravity="center"
+                        android:text="more..."
+                        android:visibility="visible"
+                        android:textColor="@color/task_text_color" />
+
+                    <LinearLayout
+                        android:id="@+id/comedyBenefit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_below="@id/comedyMore">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="1. Stress Reduction"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="2. Muscle Relaxer"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="3.Burns Calories"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="4. Stimulates the Brain"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="5. Natural Pain Killer"
+                            android:textColor="#270121"/>
+
+                        <TextView
+                            android:id="@+id/comedyClose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="41dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/alatsi"
+                            android:text="less"
+                            android:textColor="@color/task_text_color"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/comedy_white">
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lauLL"
+                android:layout_below="@id/comedyLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/lauRl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="51dp"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/lau"
+                        android:layout_width="205dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/alatsi"
+                        android:layout_marginStart="12dp"
+                        android:padding="3dp"
+                        android:text="Laughter therapy is the best medicine for all kind \n of stress."
+                        android:minLines="2"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lauMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lau"
+                        android:layout_marginStart="112dp"
+                        android:layout_marginTop="-12dp"
+                        android:fontFamily="@font/alatsi"
+                        android:gravity="center"
+                        android:text="more..."
+                        android:visibility="visible"
+                        android:textColor="@color/task_text_color" />
+
+                    <LinearLayout
+                        android:id="@+id/lauBenefit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_below="@id/lauMore">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="1. Increase Positivity"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="2. Reduce Pain"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="3.Strengthen Immune System"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="4. Increase endorphins"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="5. Decrease Depression"
+                            android:textColor="#270121"/>
+
+                        <TextView
+                            android:id="@+id/lauClose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="41dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/alatsi"
+                            android:text="less"
+                            android:textColor="@color/task_text_color"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/lau_white">
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/travelLL"
+                android:layout_below="@id/lauLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp">
+
+                <RelativeLayout
+                    android:id="@+id/travelRl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="51dp"
+                    android:gravity="center"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/travel"
+                        android:layout_width="205dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/alatsi"
+                        android:layout_marginStart="12dp"
+                        android:padding="3dp"
+                        android:text="Travelling to new places is good for mood changing."
+                        android:minLines="2"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/travelMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/travel"
+                        android:layout_marginStart="112dp"
+                        android:layout_marginTop="-12dp"
+                        android:fontFamily="@font/alatsi"
+                        android:gravity="center"
+                        android:text="more..."
+                        android:visibility="visible"
+                        android:textColor="@color/task_text_color" />
+
+                    <LinearLayout
+                        android:id="@+id/travelBenefit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_below="@id/travelMore">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="1. Improve Mental Health"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="2. Makes Mind Calm"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="3. Creativity"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="4. New Culture"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="5. Decrease Anxiety"
+                            android:textColor="#270121"/>
+
+                        <TextView
+                            android:id="@+id/travelClose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="41dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/alatsi"
+                            android:text="less"
+                            android:textColor="@color/task_text_color"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/travel_white">
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/famLL"
+                android:layout_below="@id/travelLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp">
+
+                <RelativeLayout
+                    android:id="@+id/famRl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="51dp"
+                    android:gravity="center"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/fam"
+                        android:layout_width="205dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginBottom="0dp"
+                        android:fontFamily="@font/alatsi"
+                        android:minLines="2"
+                        android:padding="3dp"
+                        android:text="Spend quality time with the family that helps to be stay happy."
+                        android:textColor="@color/black" />
+
+
+                    <TextView
+                        android:id="@+id/famMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/fam"
+                        android:layout_marginStart="112dp"
+                        android:layout_marginTop="-12dp"
+                        android:fontFamily="@font/alatsi"
+                        android:gravity="center"
+                        android:text="more..."
+                        android:visibility="visible"
+                        android:textColor="@color/task_text_color" />
+
+                    <LinearLayout
+                        android:id="@+id/famBenefit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_below="@id/famMore">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="1. Improve Mental Health"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="2. Boost Happiness"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="3. Reduce Stress"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="4. Self-Confidence"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="5. Self-Worth"
+                            android:textColor="#270121"/>
+
+                        <TextView
+                            android:id="@+id/famClose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="41dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/alatsi"
+                            android:text="less"
+                            android:textColor="@color/task_text_color"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/family">
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/friLL"
+                android:layout_below="@id/famLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp">
+
+                <RelativeLayout
+                    android:id="@+id/friRl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="51dp"
+                    android:gravity="center"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/fri"
+                        android:layout_width="205dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginBottom="0dp"
+                        android:fontFamily="@font/alatsi"
+                        android:minLines="2"
+                        android:padding="3dp"
+                        android:text="Talking to friends gives you relaxation."
+                        android:textColor="@color/black" />
+
+
+                    <TextView
+                        android:id="@+id/friMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/fri"
+                        android:layout_marginStart="112dp"
+                        android:layout_marginTop="-12dp"
+                        android:fontFamily="@font/alatsi"
+                        android:gravity="center"
+                        android:text="more..."
+                        android:visibility="visible"
+                        android:textColor="@color/task_text_color" />
+
+                    <LinearLayout
+                        android:id="@+id/friBenefit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_below="@id/friMore">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="1. Help to cope with traumas"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="2. Boost Happiness"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="3. Reduce Stress"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="4. Self-Confidence"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="5. Self-Worth"
+                            android:textColor="#270121"/>
+
+                        <TextView
+                            android:id="@+id/friClose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="41dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/alatsi"
+                            android:text="less"
+                            android:textColor="@color/task_text_color"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/friend_white">
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/artsLL"
+                android:layout_below="@id/friLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp">
+
+                <RelativeLayout
+                    android:id="@+id/artsRl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="51dp"
+                    android:gravity="center"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/arts"
+                        android:layout_width="205dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginBottom="0dp"
+                        android:fontFamily="@font/alatsi"
+                        android:minLines="2"
+                        android:padding="3dp"
+                        android:text="Keeping yourself busy in arts &amp; creative things."
+                        android:textColor="@color/black" />
+
+
+                    <TextView
+                        android:id="@+id/artsMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/arts"
+                        android:layout_marginStart="112dp"
+                        android:layout_marginTop="-12dp"
+                        android:fontFamily="@font/alatsi"
+                        android:gravity="center"
+                        android:text="more..."
+                        android:visibility="visible"
+                        android:textColor="@color/task_text_color" />
+
+                    <LinearLayout
+                        android:id="@+id/artsBenefit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_below="@id/artsMore">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="1. Self-Expression"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="2. Self-Esteem"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="3. Reduce Stress"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="4. Concentration"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="5. Fine Moter Skills"
+                            android:textColor="#270121"/>
+
+                        <TextView
+                            android:id="@+id/artsClose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="41dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/alatsi"
+                            android:text="less"
+                            android:textColor="@color/task_text_color"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/arts_white">
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/stupidLL"
+                android:layout_below="@id/artsLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp">
+
+                <RelativeLayout
+                    android:id="@+id/stupidRl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="51dp"
+                    android:gravity="center"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/stupid"
+                        android:layout_width="205dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginBottom="0dp"
+                        android:fontFamily="@font/alatsi"
+                        android:minLines="2"
+                        android:padding="3dp"
+                        android:text="Sometimes doing stupid things keeps you more alive."
+                        android:textColor="@color/black" />
+
+
+                    <TextView
+                        android:id="@+id/stupidMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/stupid"
+                        android:layout_marginStart="112dp"
+                        android:layout_marginTop="-12dp"
+                        android:fontFamily="@font/alatsi"
+                        android:gravity="center"
+                        android:text="more..."
+                        android:visibility="visible"
+                        android:textColor="@color/task_text_color" />
+
+                    <LinearLayout
+                        android:id="@+id/stupidBenefit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_below="@id/stupidMore">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="1. Makes for Happy"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="2. Keep you Calm"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="3. Reduce Stress"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="4. Good for Mental Health"
+                            android:textColor="#270121"/>
+
+                        <TextView
+                            android:id="@+id/stupidLike"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/alatsi"
+                            android:text="Like.."
+                            android:textColor="@color/task_text_color"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/stupid">
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <TableLayout
+                android:id="@+id/stupidTL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/stupidLL"
+                android:layout_marginTop="-10dp"
+                android:layout_marginStart="21dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/alatsi"
+                    android:text="Swimming in Really Cold Water"
+                    android:textColor="@color/green_900"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/alatsi"
+                    android:text="Laying Naked in the Sun"
+                    android:textColor="@color/green_900"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/alatsi"
+                    android:text="Sitting and Thinking About Nothing"
+                    android:textColor="@color/green_900"/>
+
+                <TextView
+                    android:id="@+id/stupidTLess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/alatsi"
+                    android:text="Close"
+                    android:textColor="@color/task_text_color"/>
+
+
+            </TableLayout>
+
+            <RelativeLayout
+                android:id="@+id/readLL"
+                android:layout_below="@id/stupidTL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp">
+
+                <RelativeLayout
+                    android:id="@+id/readRl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="51dp"
+                    android:gravity="center"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/read"
+                        android:layout_width="205dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginBottom="0dp"
+                        android:fontFamily="@font/alatsi"
+                        android:minLines="2"
+                        android:padding="3dp"
+                        android:text="Reading comics is good for mood refreshing."
+                        android:textColor="@color/black" />
+
+
+                    <TextView
+                        android:id="@+id/readMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/read"
+                        android:layout_marginStart="112dp"
+                        android:layout_marginTop="-12dp"
+                        android:fontFamily="@font/alatsi"
+                        android:gravity="center"
+                        android:text="more..."
+                        android:visibility="visible"
+                        android:textColor="@color/task_text_color" />
+
+                    <LinearLayout
+                        android:id="@+id/readBenefit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_below="@id/readMore">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="1. Good for Brain"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="2. Mood Changing"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="3. Stress buster"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="4. Positivity"
+                            android:textColor="#270121"/>
+
+                        <TextView
+                            android:id="@+id/readClose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="41dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/alatsi"
+                            android:text="less"
+                            android:textColor="@color/task_text_color"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/comics_white">
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/writeLL"
+                android:layout_below="@id/readLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp">
+
+                <RelativeLayout
+                    android:id="@+id/writeRl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="51dp"
+                    android:gravity="center"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/write"
+                        android:layout_width="205dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginBottom="0dp"
+                        android:fontFamily="@font/alatsi"
+                        android:minLines="2"
+                        android:padding="3dp"
+                        android:text="Write down a feeling or thought can helpful for mood change."
+                        android:textColor="@color/black" />
+
+
+                    <TextView
+                        android:id="@+id/writeMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/write"
+                        android:layout_marginStart="112dp"
+                        android:layout_marginTop="-12dp"
+                        android:fontFamily="@font/alatsi"
+                        android:gravity="center"
+                        android:text="more..."
+                        android:visibility="visible"
+                        android:textColor="@color/task_text_color" />
+
+                    <LinearLayout
+                        android:id="@+id/writeBenefit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_below="@id/writeMore">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="1. Reduce Mental Stress"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="2. Reduce Symptoms of \n Depreesion"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="3. Positivity"
+                            android:textColor="#270121"/>
+
+                        <TextView
+                            android:id="@+id/writeClose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="41dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/alatsi"
+                            android:text="less"
+                            android:textColor="@color/task_text_color"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/write_white">
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/religionLL"
+                android:layout_below="@id/writeLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp">
+
+                <RelativeLayout
+                    android:id="@+id/religionRl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="51dp"
+                    android:gravity="center"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/religion"
+                        android:layout_width="205dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginBottom="0dp"
+                        android:fontFamily="@font/alatsi"
+                        android:minLines="2"
+                        android:padding="3dp"
+                        android:text="Reading of Spiritual Books can be good for Mental Health."
+                        android:textColor="@color/black" />
+
+
+                    <TextView
+                        android:id="@+id/religionMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/religion"
+                        android:layout_marginStart="112dp"
+                        android:layout_marginTop="-12dp"
+                        android:fontFamily="@font/alatsi"
+                        android:gravity="center"
+                        android:text="more..."
+                        android:visibility="visible"
+                        android:textColor="@color/task_text_color" />
+
+                    <LinearLayout
+                        android:id="@+id/religionBenefit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_below="@id/religionMore">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="1. Strong Decisions"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="2. Positive Mindset"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="3. Good for Knowledge"
+                            android:textColor="#270121"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:padding="2dp"
+                            android:text="4. Confidence Feeling"
+                            android:textColor="#270121"/>
+
+                        <TextView
+                            android:id="@+id/religionClose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="41dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/alatsi"
+                            android:text="less"
+                            android:textColor="@color/task_text_color"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/religion_white">
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

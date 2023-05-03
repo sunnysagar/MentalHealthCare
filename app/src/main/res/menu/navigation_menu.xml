@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/main"
+            android:title="Home"
+            android:icon="@drawable/home_m"/>
+        <item
+            android:id="@+id/docs"
+            android:title="Doctor Consult"
+            android:icon="@drawable/doctor"/>
+        <item
+            android:id="@+id/task"
+            android:title="Task &amp; Activities"
+            android:icon="@drawable/tips"/>
+        <item
+            android:id="@+id/yoga"
+            android:title="Exercises &amp; Yoga"
+            android:icon="@drawable/yoga_icon"/>
+
+        <item
+            android:id="@+id/logout"
+            android:title="Logout"
+            android:icon="@drawable/logout"/>
+
+    </group>
+
+</menu>

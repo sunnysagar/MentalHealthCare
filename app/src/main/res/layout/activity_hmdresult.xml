@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sc1"
+    android:orientation="vertical"
+    tools:context="com.sunny.mentalhealthcare.activity.HMDResult">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/hmdRToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/green_900"
+            android:textAlignment="center"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:layout_scrollFlags="enterAlways"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+<!--    <TextView-->
+<!--        android:id="@+id/hmdr"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="HAM-D Result"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:textColor="@color/orange_500"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textStyle="bold"/>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/ts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Score =  "
+                    android:layout_marginTop="20dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:id="@+id/tcs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/ts"
+                    android:layout_marginTop="21dp"
+                    android:text=" - "
+                    android:textColor="@color/orange_500"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="7dp"
+                    android:layout_marginTop="90dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/lod"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tcs"
+                            android:layout_marginTop="20dp"
+                            android:text="Levels of Depression"
+                            android:textSize="25sp"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:textColor="#b71c1c"/>
+
+                        <TextView
+                            android:id="@+id/ud"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lod"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="0-7 - Normal"
+                            android:textSize="20sp"
+                            android:padding="5dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/mmd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ud"
+                            android:layout_marginTop="9dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="8-13 - Mild Depression"
+                            android:textSize="20sp"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            />
+
+                        <TextView
+                            android:id="@+id/bcd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/mmd"
+                            android:layout_marginTop="9dp"
+                            android:padding="12dp"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="5dp"
+                            android:text="14-18 - Moderate Depression"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/md"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/bcd"
+                            android:layout_marginTop="9dp"
+                            android:layout_marginLeft="10dp"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:text="19-22 - Severe Depression"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/sd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/md"
+                            android:layout_marginTop="9dp"
+                            android:layout_marginLeft="10dp"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:text=">=23 - Very Severe Depression"
+                            android:textSize="20sp"
+                            />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/hmdbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:layout_marginBottom="25dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/green_900" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

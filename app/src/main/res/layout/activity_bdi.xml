@@ -1,0 +1,1326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sunny.mentalhealthcare.activity.BDI">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/bdiToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/green_900"
+            android:textAlignment="center"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:layout_scrollFlags="enterAlways"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Beck's Depression Inventory"-->
+<!--        android:background="@color/orange_500"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textSize="25sp"-->
+<!--        android:textStyle="bold"/>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="25dp"
+        android:layout_marginTop="-10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/BDIDefination"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1."
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RadioGroup
+                    android:id="@+id/bdi1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0     I do not feel sad"
+                        android:layout_marginTop="3dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/ck11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1     I feel sad"
+                        android:layout_marginTop="3dp" />
+                    <RadioButton
+                        android:id="@+id/ck12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2     I am sad all the time and I can't snap out of it. "
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3     I am so sad and unhappy that I can't stand it.  "
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2."
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RadioGroup
+                    android:id="@+id/bdi2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0     I am not particularly discouraged about the future.  "
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1     I feel discouraged about the future.  "
+                        android:layout_marginTop="3dp" />
+                    <RadioButton
+                        android:id="@+id/ck22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2     I feel I have nothing to look forward to."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3     I feel the future is hopeless and that things cannot improve."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3."
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RadioGroup
+                    android:id="@+id/bdi3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0     I do not feel like a failure."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1     I feel I have failed more than the average person. "
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2     As I look back on my life, all I can see is a lot of failures. "
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3     I feel I am a complete failure as a person."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4."
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RadioGroup
+                    android:id="@+id/bdi4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    I get as much satisfaction out of things as I used to."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    I don't enjoy things the way I used to."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck42"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    I don't get real satisfaction out of anything anymore."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck43"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3    I am dissatisfied or bored with everything."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5."
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RadioGroup
+                    android:id="@+id/bdi5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    I don't feel particularly guilty."
+                        android:layout_marginTop="3dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/ck51"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    I feel guilty a good part of the time."
+                        android:layout_marginTop="3dp" />
+                    <RadioButton
+                        android:id="@+id/ck52"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    I feel quite guilty most of the time."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck53"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3    I feel guilty all of the time."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+        </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6."
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RadioGroup
+                    android:id="@+id/bdi6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck60"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    I don't feel I am being punished."
+                        android:layout_marginTop="3dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/ck61"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    I feel I may be punished."
+                        android:layout_marginTop="3dp" />
+                    <RadioButton
+                        android:id="@+id/ck62"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    I expect to be punished."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck63"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3    I feel I am being punished."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="7."
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RadioGroup
+                    android:id="@+id/bdi7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck70"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0     I don't feel disappointed in myself."
+                        android:layout_marginTop="3dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/ck71"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1     I am disappointed in myself."
+                        android:layout_marginTop="3dp" />
+                    <RadioButton
+                        android:id="@+id/ck72"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2     I am disgusted with myself. "
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck73"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3     I hate myself."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="8."
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RadioGroup
+                    android:id="@+id/bdi8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck80"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    I don't feel I am any worse than anybody else."
+                        android:layout_marginTop="3dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/ck81"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    I am critical of myself for my weaknesses or mistakes."
+                        android:layout_marginTop="3dp" />
+                    <RadioButton
+                        android:id="@+id/ck82"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    I blame myself all the time for my faults. "
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck83"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3    I blame myself for everything bad that happens. "
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9."
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RadioGroup
+                    android:id="@+id/bdi9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck90"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    I don't have any thoughts of killing myself."
+                        android:layout_marginTop="3dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/ck91"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    I have thoughts of killing myself, but I would not carry them out."
+                        android:layout_marginTop="3dp" />
+                    <RadioButton
+                        android:id="@+id/ck92"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    I would like to kill myself."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck93"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3    I would kill myself if I had the chance."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10."
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RadioGroup
+                    android:id="@+id/bdi10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    I don't cry any more than usual."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck101"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    I cry more now than I used to."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck102"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    I cry all the time now."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck103"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3    I used to be able to cry, but now I can't cry even though I want to."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="11."
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RadioGroup
+                    android:id="@+id/bdi11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck110"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    I am no more irritated by things than I ever was."
+                        android:layout_marginTop="3dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/ck111"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    I am slightly more irritated now than usual."
+                        android:layout_marginTop="3dp" />
+                    <RadioButton
+                        android:id="@+id/ck112"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    I am quite annoyed or irritated a good deal of the time."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck113"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3    I feel irritated all the time."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12."
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RadioGroup
+                    android:id="@+id/bdi12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck120"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    I have not lost interest in other people."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck121"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    I am less interested in other people than I used to be."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck122"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    I have lost most of my interest in other people."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck123"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3    I have lost all of my interest in other people."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="13."
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RadioGroup
+                    android:id="@+id/bdi13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck130"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    I make decisions about as well as I ever could."
+                        android:layout_marginTop="3dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/ck131"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    I put off making decisions more than I used to."
+                        android:layout_marginTop="3dp" />
+                    <RadioButton
+                        android:id="@+id/ck132"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    I have greater difficulty in making decisions more than I used to."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck133"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3    I can't make decisions at all anymore."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="14."
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RadioGroup
+                    android:id="@+id/bdi14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck140"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    I don't feel that I look any worse than I used to."
+                        android:layout_marginTop="3dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/ck141"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    I am worried that I am looking old or unattractive."
+                        android:layout_marginTop="3dp" />
+                    <RadioButton
+                        android:id="@+id/ck142"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    I feel there are permanent changes in my appearance that make me look
+ unattractive."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck143"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3    I believe that I look ugly."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="15."
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RadioGroup
+                    android:id="@+id/bdi15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck150"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    I can work about as well as before."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck151"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    It takes an extra effort to get started at doing something."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck152"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    I have to push myself very hard to do anything."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck153"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3    I can't do any work at all."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="16."
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RadioGroup
+                    android:id="@+id/bdi16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck160"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    I can sleep as well as usual."
+                        android:layout_marginTop="3dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/ck161"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    I don't sleep as well as I used to."
+                        android:layout_marginTop="3dp" />
+                    <RadioButton
+                        android:id="@+id/ck162"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    I wake up 1-2 hours earlier than usual and find it hard to get back to sleep."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck163"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3    I wake up several hours earlier than I used to and cannot get back to sleep."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="17."
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RadioGroup
+                    android:id="@+id/bdi17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck170"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    I don't get more tired than usual."
+                        android:layout_marginTop="3dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/ck171"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    I get tired more easily than I used to."
+                        android:layout_marginTop="3dp" />
+                    <RadioButton
+                        android:id="@+id/ck172"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    I get tired from doing almost anything."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck173"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3    I am too tired to do anything."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="18."
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="18dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RadioGroup
+                    android:id="@+id/bdi18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck180"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    My appetite is no worse than usual."
+                        android:layout_marginTop="3dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/ck181"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    My appetite is not as good as it used to be."
+                        android:layout_marginTop="3dp" />
+                    <RadioButton
+                        android:id="@+id/ck182"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    My appetite is much worse now."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck183"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3    I have no appetite at all anymore."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="19."
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="19dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RadioGroup
+                    android:id="@+id/bdi19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck190"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    I haven't lost much weight, if any, lately."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck191"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    I have lost more than five pounds."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck192"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    I have lost more than ten pounds."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck193"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3    I have lost more than fifteen pounds."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="20."
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RadioGroup
+                    android:id="@+id/bdi20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck200"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    I am no more worried about my health than usual."
+                        android:layout_marginTop="3dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/ck201"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    I am worried about physical problems like aches, pains, upset stomach, or
+ constipation."
+                        android:layout_marginTop="3dp" />
+                    <RadioButton
+                        android:id="@+id/ck202"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    I am very worried about physical problems and it's hard to think of much else."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck203"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3    I am so worried about my physical problems that I cannot think of anything else."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="21."
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RadioGroup
+                    android:id="@+id/bdi21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck210"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    I have not noticed any recent change in my interest in sex."
+                        android:layout_marginTop="3dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/ck211"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    I am less interested in sex than I used to be."
+                        android:layout_marginTop="3dp" />
+                    <RadioButton
+                        android:id="@+id/ck212"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    I have almost no interest in sex."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck213"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3    I have lost interest in sex completely. "
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/bdbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Score"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/green_900" />
+
+        </LinearLayout>
+
+
+
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

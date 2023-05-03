@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.sunny.mentalhealthcare.activity.BasicDetails">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bigshot_one"
+            android:gravity="center_horizontal"
+            android:text="Basic Details Form"
+            android:textColor="@color/light_blue_900"
+            android:textSize="30sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/etTitle"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="-2dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/light_blue_900"
+            android:gravity="center_horizontal" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginRight="17dp"
+                android:textColorHint="@color/green_900"
+                app:boxStrokeColor="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/bdName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginRight="17dp"
+                android:textColorHint="@color/green_900"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/bdAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Age"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginRight="17dp"
+                android:textColorHint="@color/green_900"
+                app:boxStrokeColor="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/bdMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mobile"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginRight="17dp"
+                android:textColorHint="@color/green_900"
+                app:boxStrokeColor="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/bdEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginRight="17dp"
+                android:textColorHint="@color/green_900"
+                app:boxStrokeColor="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/bdJob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Profession"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="21dp"
+                android:layout_marginStart="17dp">
+
+                <View
+                    android:id="@+id/centerShim"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:visibility="invisible"
+                    android:layout_centerHorizontal="true"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:id="@+id/bdCityBox"
+                    android:layout_width="match_parent"
+                    android:layout_toStartOf="@id/centerShim"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:textColorHint="@color/green_900"
+                    app:boxStrokeColor="@color/black">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/bdCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="City"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/bdCityBox"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="17dp"
+                    android:textColorHint="@color/green_900"
+                    app:boxStrokeColor="@color/black">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/bdState"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="State"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="9dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="21dp"
+                android:text="Gender"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="17dp"
+                android:background="@color/black"
+                app:cardCornerRadius="5dp">
+
+                <RadioGroup
+                    android:id="@+id/bdRadioGen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="17dp">
+
+                    <RadioButton
+                        android:id="@+id/bdGM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="Male"/>
+
+                    <RadioButton
+                        android:id="@+id/bdGF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="90dp"
+                        android:layout_marginEnd="25dp"
+                        android:maxLines="1"
+                        android:text="Female"/>
+
+                </RadioGroup>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="9dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="21dp"
+                android:text="Marital Status"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="17dp"
+                android:background="@color/black"
+                app:cardCornerRadius="5dp">
+
+                <RadioGroup
+                    android:id="@+id/bdRadioMarry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="17dp">
+
+                    <RadioButton
+                        android:id="@+id/bdMSingle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="Single"/>
+
+                    <RadioButton
+                        android:id="@+id/bdMMd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="90dp"
+                        android:layout_marginEnd="25dp"
+                        android:maxLines="1"
+                        android:text="Married"/>
+                </RadioGroup>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/bdInt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="20dp"
+                android:padding="9dp"
+                android:text="Interest(Top Most 2)"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="17dp"
+                android:background="@color/black"
+                app:cardCornerRadius="5dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp">
+
+                    <CheckBox
+                        android:id="@+id/bdMovies"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="Movies" />
+
+                    <CheckBox
+                        android:id="@+id/bdMusic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="35dp"
+                        android:text="Music" />
+
+                    <CheckBox
+                        android:id="@+id/bdTrv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/bdMovies"
+                        android:layout_marginStart="15dp"
+                        android:text="Travelling" />
+
+                    <CheckBox
+                        android:id="@+id/bdSports"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bdMusic"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="35dp"
+                        android:text="Sports" />
+
+                    <CheckBox
+                        android:id="@+id/bdPainting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bdTrv"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="15dp"
+                        android:text="Painting" />
+
+                    <CheckBox
+                        android:id="@+id/bdCooking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bdSports"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="25dp"
+                        android:text="Cooking" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="20dp"
+                android:padding="9dp"
+                android:text="How much time do you spend on phone?"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="17dp"
+                android:textColorHint="@color/green_900"
+                app:boxStrokeColor="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/bdTymP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Approx(in hrs)"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="20dp"
+                android:padding="9dp"
+                android:text="How many people did you meet in one week?"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="17dp"
+                android:textColorHint="@color/green_900"
+                app:boxStrokeColor="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/bdpw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="(Approximately)"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="20dp"
+                android:padding="9dp"
+                android:text="How's your mood today?"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="17dp"
+                android:textColorHint="@color/green_900"
+                app:boxStrokeColor="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/bdFt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Rate in Scale of 1-10"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="20dp"
+                android:padding="9dp"
+                android:text="Tell us about your Health!"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="17dp"
+                android:textColorHint="@color/green_900"
+                app:boxStrokeColor="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/bdFitness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="In Scale of 1-10(fitness rating)"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnNxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="25dp"
+                android:backgroundTint="@color/green_900"
+                android:padding="10dp"
+                android:text="Save &amp; Next"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

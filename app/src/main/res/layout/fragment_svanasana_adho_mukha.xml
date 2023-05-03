@@ -1,0 +1,254 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.sunny.mentalhealthcare.yoga.AdhoMukhaSvanasanaFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="12dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Adho Mukha Svanasana"
+            android:layout_marginTop="-9dp"
+            android:padding="6dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="23sp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/dm_serif_text"
+            android:textColor="#FB7A09"/>
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-7dp"
+            android:padding="6dp">
+
+            <TextView
+                android:id="@+id/def1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:text="This posture is quite common for a good reason.It help in lengthening your spine and strengthening your arms, shoulders, and legs."
+                android:fontFamily="@font/tienne"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/def2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="It also increases blood flow to your brain."
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/tienne_bold"
+                android:textSize="16sp"
+                android:textColor="#B64002"
+                android:layout_below="@id/def1"/>
+
+
+            <TextView
+                android:id="@+id/def1.1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/def2"
+                android:layout_marginTop="3dp"
+                android:text="By amping up our circulation to this area "
+                android:fontFamily="@font/tienne"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/def1.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/def1.1"
+                android:layout_marginTop="3dp"
+                android:text="It can provide experience of greater energy and mental clarity."
+                android:fontFamily="@font/tienne_bold"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/def1.3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/def1.2"
+                android:layout_marginTop="3dp"
+                android:text="Helping us to deal with issues that cause us stress or anxiety. "
+                android:fontFamily="@font/tienne_bold"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:id="@+id/pose"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/def1.3"
+                android:layout_centerInParent="true"
+                android:padding="7dp"
+                android:src="@drawable/adho3" />
+
+
+            <RelativeLayout
+                android:id="@+id/toDo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pose"
+                android:layout_marginTop="7dp"
+                android:padding="2dp">
+
+                <ImageView
+                    android:id="@+id/can"
+                    android:layout_width="200dp"
+                    android:layout_height="220dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="-40dp"
+                    android:src="@drawable/can"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:id="@+id/toDotitl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/alfa_slab_one"
+                    android:text="How to do Downward-Facing Dog Pose"
+                    android:maxLines="2"
+                    android:textColor="#C89600"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="370dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/toDotitl"
+                    android:layout_marginTop="-3dp"
+                    android:background="#C89600"
+                    android:gravity="center_horizontal" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/can"
+                    android:layout_below="@id/view"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        android:id="@+id/toDo1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="1. Come to all four on your hands and knees with a flat back."
+                        android:textColor="@color/black" />
+
+
+                    <TextView
+                        android:id="@+id/toDo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toDo1"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="2. Lift your hips up by pushing against the ground with your toes and keep straight your legs and arms."
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/toDo3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toDo2"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="3. Push against the ground with your hands to all your hips to rise up."
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/toDo4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toDo3"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="4. Your body should come to an inverted v-shape."
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/toDo5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toDo4"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="5. If you feel tightness in your legs, it’s OK to bend your knees."
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/toDo6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toDo5"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="6. After taking a few breaths here, gently release the pose."
+                        android:textColor="@color/black" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/bn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toDo"
+                android:layout_marginStart="4dp"
+                android:text="Adho Mukha Svanasana is a weight-bearing exercise and will strengthen your bones."
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/alatsi"
+                android:textColor="#46004A" />
+
+            <TextView
+                android:id="@+id/bn2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/bn1"
+                android:text="some more benefits of this asana are lower back release, mental and physical relaxation, improved knee, ankle and foot mobility."
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="4dp"
+                android:textSize="16sp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/alatsi"
+                android:textColor="#46004A" />
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

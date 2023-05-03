@@ -1,0 +1,242 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.sunny.mentalhealthcare.yoga.SavasanaFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="12dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Savasana"
+            android:layout_marginTop="-9dp"
+            android:padding="6dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="23sp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/dm_serif_text"
+            android:textColor="#FB7A09"/>
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-7dp"
+            android:padding="6dp">
+
+            <TextView
+                android:id="@+id/def1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:text="corpse pose is actually one of the most gentle, easy, and comforting postures that yoga has to offer."
+                android:fontFamily="@font/tienne"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/def2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This meditative pose is excellent for controlling your mind, freeing you from stress, anxiety, and depression while inviting clarity into your experience."
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/tienne_bold"
+                android:textSize="16sp"
+                android:textColor="#B64002"
+                android:layout_below="@id/def1"/>
+
+            <TextView
+                android:id="@+id/def1.1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/def2"
+                android:layout_marginTop="3dp"
+                android:text="Although the physical side of things is quite easy, mastering the mental aspect of this pose can be a challenge."
+                android:fontFamily="@font/tienne_bold"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/def1.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/def1.1"
+                android:layout_marginTop="3dp"
+                android:text="However, with a continued focus on your breath or a mantra, you’ll ultimately unlock deep states of calmness and bliss."
+                android:fontFamily="@font/tienne_bold"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:id="@+id/pose"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/def1.2"
+                android:layout_centerInParent="true"
+                android:padding="7dp"
+                android:src="@drawable/corpose" />
+
+
+            <RelativeLayout
+                android:id="@+id/toDo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pose"
+                android:layout_marginTop="7dp"
+                android:padding="2dp">
+
+                <ImageView
+                    android:id="@+id/can"
+                    android:layout_width="200dp"
+                    android:layout_height="220dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="-40dp"
+                    android:src="@drawable/can"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:id="@+id/toDotitl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/alfa_slab_one"
+                    android:text="How to do Corpse Pose"
+                    android:maxLines="2"
+                    android:textColor="#C89600"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="218dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/toDotitl"
+                    android:layout_marginTop="-3dp"
+                    android:background="#C89600"
+                    android:gravity="center_horizontal" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/can"
+                    android:layout_below="@id/view"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        android:id="@+id/toDo1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="1. Lie flat on your back on your mat."
+                        android:textColor="@color/black" />
+
+
+                    <TextView
+                        android:id="@+id/toDo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toDo1"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="2. Rest your arms on the ground a few inches away from your body and Face your palms upwards."
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/toDo3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toDo2"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="3. Keep your knees slightly spread and your toes pointing outwards."
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/toDo4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toDo3"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="4. Close your eyes and consciously relax every part of your body, including your toes, ankles, shins, calves, left knee, right knee, and so on until you’ve relaxed each body part."
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/toDo5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toDo4"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="5. After you’re fully relaxed, keep breathing slowly and deeply from your belly and Remain here for as long as you’d like."
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/toDo6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toDo5"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="6. When you’re finished, gently roll onto your right side for a moment before getting up."
+                        android:textColor="@color/black" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/bn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toDo"
+                android:layout_marginStart="4dp"
+                android:text="This pose is typically performed at the end of each yoga session, allowing you to integrate all the energy and revelations that may have been cultivated during your practice."
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/alatsi"
+                android:textColor="#46004A" />
+
+            <TextView
+                android:id="@+id/bn2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/bn1"
+                android:text="Savasana can be practiced in many ways, including focusing awareness on the breath or guided muscle relaxation."
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="4dp"
+                android:textSize="16sp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/alatsi"
+                android:textColor="#46004A" />
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- for the internet access -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Compass Sensor need -->
+    <uses-feature
+        android:name="android.hardware.sensor.compass"
+        android:required="true" /> <!-- for read and write data from device -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="sensorPortrait"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MY"
+        tools:targetApi="31">
+        <activity
+            android:name="com.sunny.mentalhealthcare.activity.PlaceActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.sunny.mentalhealthcare.activity.MusicActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.sunny.mentalhealthcare.activity.MoviesActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.sunny.mentalhealthcare.activity.YogaActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme">
+
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name="com.sunny.mentalhealthcare.activity.MedicalReport"
+            android:exported="true" />
+        <activity
+            android:name="com.sunny.mentalhealthcare.activity.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Splash">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="com.sunny.mentalhealthcare.activity.TrialActivity"
+            android:exported="true"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name="com.sunny.mentalhealthcare.activity.SignupActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.sunny.mentalhealthcare.activity.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.sunny.mentalhealthcare.activity.CheckUp"
+            android:exported="true"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name="com.sunny.mentalhealthcare.activity.HMDResult"
+            android:exported="false" />
+        <activity
+            android:name="com.sunny.mentalhealthcare.activity.HAMD"
+            android:exported="false" />
+        <activity
+            android:name="com.sunny.mentalhealthcare.activity.BDIResult"
+            android:exported="true" />
+        <activity
+            android:name="com.sunny.mentalhealthcare.activity.BDI"
+            android:exported="true" />
+        <activity
+            android:name="com.sunny.mentalhealthcare.activity.BasicDetails"
+            android:exported="true"
+            android:theme="@style/Theme.MY" />
+        <activity
+            android:name="com.sunny.mentalhealthcare.activity.Worry"
+            android:exported="true" />
+        <activity
+            android:name="com.sunny.mentalhealthcare.activity.MainActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

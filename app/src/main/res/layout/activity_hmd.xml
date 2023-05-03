@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sunny.mentalhealthcare.activity.HAMD">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/hmdToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/green_900"
+            android:textAlignment="center"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:layout_scrollFlags="enterAlways"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Hamilton Depression Rating Scale"-->
+<!--        android:textColor="@color/orange_500"-->
+<!--        android:textSize="23sp"-->
+<!--        android:autoSizeTextType="uniform"-->
+<!--        android:layout_marginTop="2dp"-->
+<!--        android:textStyle="bold"/>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="25dp"
+        android:layout_marginTop="-10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hmd"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. DEPRESSED MOOD (sadness, hopeless, helpless, worthless)"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="7dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0     Absent"
+                        android:layout_marginTop="3dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/ck11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1     Sadness,etc."
+                        android:layout_marginTop="3dp" />
+                    <RadioButton
+                        android:id="@+id/ck12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2      Occasional weeping"
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3      Frequent weeping"
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4      Extreme symptoms"
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. FEELINGS OF GUILT"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="7dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0     Absent"
+                        android:layout_marginTop="3dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/ck21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1     Self-reproach, feels he/she has let people down"
+                        android:layout_marginTop="3dp" />
+                    <RadioButton
+                        android:id="@+id/ck22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2     Ideas of guilt"
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3     Present illeness is a punishment;delusions of guilt"
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4     Hallucinations of guilt"
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. SUICIDE"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="7dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0     Absent"
+                        android:layout_marginTop="3dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/ck31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1     Feels life is not worth living."
+                        android:layout_marginTop="3dp" />
+                    <RadioButton
+                        android:id="@+id/ck32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2     Wishes he/she were dead. "
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3      Ideas or gesture of suicide"
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4     Attempts of suicide."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. INSOMNIA: EARLY IN THE NIGHT(Difficulty in falling asleep)"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="7dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    Absent"
+                        android:layout_marginTop="3dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/ck41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    Occasional"
+                        android:layout_marginTop="3dp" />
+                    <RadioButton
+                        android:id="@+id/ck42"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    Frequent"
+                        android:layout_marginTop="3dp" />
+
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. INSOMNIA: MIDDLE OF THE NIGHT"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="7dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    Absent"
+                        android:layout_marginTop="3dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/ck51"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    Occasional"
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck52"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    Frequent"
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6. INSOMNIA: EARLY HOURS OF THE MORNING"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="7dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck60"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    Absent"
+                        android:layout_marginTop="3dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/ck61"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    Occasional"
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck62"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    Frequent"
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="7. WORK AND ACTIVITIES"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="7dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck70"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0     No difficulty."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck71"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1     Thoughts and feelings of incapacity, fatigue and vacillation"
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck72"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2     Loss of interest in hobbies, decreased social activites"
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck73"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3     Productivity decreased."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck74"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4     Unable to work.Stopped working because of present illness only."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="8. RETARDATION(slowness of thought and speech, impaired
+ability to concentrate, decreased motor activity)"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="7dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck80"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    Absent"
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck81"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    Slight retardation at interview."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck82"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    Obvious retardation at interview. "
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck83"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3    Interview difficult. "
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck84"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4    Complete stupor."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9. AGITATION(Restlessness associated with anxiety)"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="7dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck90"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0     Absent."
+                        android:layout_marginTop="3dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/ck91"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1      Occasional."
+                        android:layout_marginTop="3dp" />
+                    <RadioButton
+                        android:id="@+id/ck92"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    Frequent."
+                        android:layout_marginTop="3dp" />
+
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10. ANXIETY PSYCHIC"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="7dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    No difficulty."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck101"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    Tension and irritability."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck102"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    Worrying about minor matters."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck103"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3    Apprehensive attitude."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck104"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4    Fears."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="11. ANXIETY SOMATIC (physiological concomitants of
+anxiety) such as:
+gastro-intestinal – dry mouth, wind, indigestion, diarrhea,
+cramps, belching
+cardio-vascular – palpitations, headaches
+respiratory – hyperventilation, sighing
+urinary frequency
+sweating"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="7dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck110"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0     Absent."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck111"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    Mild."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck112"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    Moderate."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck113"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3    Severe."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck114"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4    Incapacitating."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12. SOMATIC SYMPTOMS GASTRO-INTESTINAL(Loss of appetitte, heavy feeling in abdomen; constipation)"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="7dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck120"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    Absent."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck121"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1     Mild."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck122"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    Severe."
+                        android:layout_marginTop="3dp" />
+
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="13. GENERAL SOMATIC SYMPTOMS(Heaviness in limbs, back or head;diffuse backache;loss of energy and fatiguability"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="7dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck130"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    Absent."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck131"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    Mild."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck132"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    Severe."
+                        android:layout_marginTop="3dp" />
+
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="14. GENITAL SYMPTOMS (symptoms such as loss of libido,
+menstrual disturbances)"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="7dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck140"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    Absent."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck141"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    Mild."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck142"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    Severe."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="15. HYPOCHONDRIASIS"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="7dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck150"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    Not present."
+                        android:layout_marginTop="3dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/ck151"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    Self-absorption (bodily)."
+                        android:layout_marginTop="3dp" />
+                    <RadioButton
+                        android:id="@+id/ck152"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    Preoccupation with health."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck153"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3    Frequent complaints, requests for help, etc."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck154"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4    Hypochondriacal delusions."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="16. LOSS OF WEIGHT"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="7dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck160"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    No weight loss."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck161"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    Slight."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck162"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2     Obvious or severe."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="17. INSIGHT(Insight must be interpreted in terms of patient understanding and background"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="7dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_marginEnd="3dp">
+
+                    <RadioButton
+                        android:id="@+id/ck170"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0    No loss."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck171"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1    Partial or doubtfull loss."
+                        android:layout_marginTop="3dp" />
+
+                    <RadioButton
+                        android:id="@+id/ck172"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2    Loss of insight."
+                        android:layout_marginTop="3dp" />
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/hdbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Score"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/green_900" />
+
+        </LinearLayout>
+
+
+
+
+
+    </ScrollView>
+
+
+</LinearLayout>

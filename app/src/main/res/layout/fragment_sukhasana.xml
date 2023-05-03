@@ -1,0 +1,291 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.sunny.mentalhealthcare.yoga.SukhasanaFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="12dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SUKHASANA"
+            android:layout_marginTop="-9dp"
+            android:padding="6dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="23sp"
+            android:fontFamily="@font/dm_serif_text"
+            android:textColor="#FB7A09"/>
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-7dp"
+            android:padding="6dp">
+
+            <TextView
+                android:id="@+id/def1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:text="Easy pose is the classic position that you see people meditating in, sitting on the floor with crossed legs and a straight spine."
+                android:fontFamily="@font/tienne"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/def2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="It can actually be a powerful tool for regaining the confidence you need to deal with "
+                android:fontFamily="@font/tienne"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_below="@id/def1"/>
+
+            <TableLayout
+                android:id="@+id/tl1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/def2"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-5dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="anxiety"
+                        android:layout_column="1"
+                        android:padding="3dp"
+                        android:fontFamily="@font/alatsi"
+                        android:textSize="18sp"
+                        android:textColor="#000722"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="depression"
+                        android:layout_column="2"
+                        android:padding="3dp"
+                        android:fontFamily="@font/alatsi"
+                        android:textSize="18sp"
+                        android:textColor="@color/task_text_color"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="chronic stress"
+                        android:layout_column="3"
+                        android:padding="3dp"
+                        android:fontFamily="@font/alatsi"
+                        android:textSize="18sp"
+                        android:textColor="#000722"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/def1.1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tl1"
+                android:text="The base of your spine connects to the earth, helping you feel deeply grounded. The symmetry of this posture also centers you. "
+                android:fontFamily="@font/tienne"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/def1.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/def1.1"
+                android:text="These two factors combined aid you in overcoming anxiety as you feel that nothing can uproot you or knock you off balance. "
+                android:fontFamily="@font/tienne_bold"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:id="@+id/pose"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:layout_below="@id/def1.2"
+                android:padding="7dp"
+                android:src="@drawable/easy_pose" />
+
+
+            <RelativeLayout
+                android:id="@+id/toDo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pose"
+                android:layout_marginTop="7dp"
+                android:padding="2dp">
+
+                <ImageView
+                    android:id="@+id/can"
+                    android:layout_width="200dp"
+                    android:layout_height="220dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="-40dp"
+                    android:src="@drawable/can"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:id="@+id/toDotitl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/alfa_slab_one"
+                    android:text="How to do Easy Pose"
+                    android:maxLines="1"
+                    android:textColor="#C89600"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="200dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/toDotitl"
+                    android:layout_marginTop="-3dp"
+                    android:background="#C89600"
+                    android:gravity="center_horizontal" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/can"
+                    android:layout_below="@id/view"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        android:id="@+id/toDo1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="1. Sit on the floor or a yoga mat with your legs crossed."
+                        android:textColor="@color/black" />
+
+
+                    <TextView
+                        android:id="@+id/toDo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toDo1"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="2. Align your torso with your hips, making your spine straight and firm."
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/toDo3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toDo2"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="3. Lengthen your tailbone and move your shoulders back and down."
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/toDo4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toDo3"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="4. Rest your arms on your knees."
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/toDo5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toDo4"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="5. Close your eyes and take deep, relaxed breaths."
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/toDo6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toDo5"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="6. Focus your attention on your heart and do it as long as you want."
+                        android:textColor="@color/black" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/bn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toDo"
+                android:text="As you sit in easy pose, you can recite a mantra or watch your breath this pose helps to ward off depression as well."
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/alatsi"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/bn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bn1"
+                android:layout_marginStart="4dp"
+                android:text="Sitting tall with perfect posture, you can experience a sense of clarity, confidence, and strength."
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/alatsi"
+                android:textColor="#46004A" />
+
+            <TextView
+                android:id="@+id/bn3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/bn2"
+                android:text=" This is a great method for keeping your mind clear."
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="4dp"
+                android:textSize="16sp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/alatsi"
+                android:textColor="#46004A" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,194 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.sunny.mentalhealthcare.fragment.DoctorsConsult">
+
+    <LinearLayout
+        android:id="@+id/Ydocs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+        <TextView
+            android:id="@+id/ydcs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Why doctor or counsellor?🤔"
+            android:layout_margin="8dp"
+            android:textColor="@color/red_900"
+            android:fontFamily="@font/alatsi"
+            android:textSize="14dp"/>
+
+        <ImageView
+            android:id="@+id/yDocsAns"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/ans23"
+            android:visibility="gone"
+            />
+
+
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_below="@+id/Ydocs"
+        android:layout_margin="6dp"
+        android:padding="6dp"
+        app:cardCornerRadius="6dp">
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            -->
+<!--        </RelativeLayout>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <RelativeLayout
+                android:id="@+id/rl1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/drNamLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name: "
+                    android:fontFamily="@font/dm_serif_text"
+                    android:textSize="18sp"
+                    android:padding="3dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/desiLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Designation: "
+                    android:textSize="18sp"
+                    android:fontFamily="@font/dm_serif_text"
+                    android:layout_below="@+id/drNamLabel"
+                    android:padding="3dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/concLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact: "
+                    android:fontFamily="@font/dm_serif_text"
+                    android:textSize="18sp"
+                    android:layout_below="@+id/desiLabel"
+                    android:padding="3dp"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/rl1"
+                android:padding="3dp">
+
+                <TextView
+                    android:id="@+id/drNam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dr Gorav Gupta"
+                    android:fontFamily="@font/tienne_bold"
+                    android:textSize="18sp"
+                    android:padding="3dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/desi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Senior Psychiatrist"
+                    android:fontFamily="@font/tienne_bold"
+                    android:layout_below="@+id/drNam"
+                    android:padding="3dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/conc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="goravgupta01@gmail.com"
+                    android:fontFamily="@font/tienne_bold"
+                    android:textSize="18sp"
+                    android:layout_below="@+id/desi"
+                    android:padding="3dp"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl2"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp">
+
+                <Button
+                    android:id="@+id/bAp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Book Appointment"
+                    android:fontFamily="@font/tienne_bold"
+                    android:backgroundTint="#e91e63"
+                    android:textColor="@color/white"
+                    android:padding="4dp"
+                    android:elevation="4dp"
+                    android:textSize="10sp"
+                    android:visibility="visible"
+                    />
+
+                <Button
+                    android:id="@+id/btnBooked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Booked"
+                    android:backgroundTint="#00e676"
+                    android:textColor="@color/black"
+                    android:padding="2dp"
+                    android:elevation="4dp"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+
+                    />
+
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

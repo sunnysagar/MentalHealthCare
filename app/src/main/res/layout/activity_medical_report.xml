@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context="com.sunny.mentalhealthcare.activity.MedicalReport">
+
+    <TextView
+        android:id="@+id/mobile"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="value"
+        android:padding="15dp" />
+
+    <Button
+        android:id="@+id/btnGentr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:padding="12dp"
+        android:text="Generate Your Medical Report"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/mobile"/>
+
+</RelativeLayout>

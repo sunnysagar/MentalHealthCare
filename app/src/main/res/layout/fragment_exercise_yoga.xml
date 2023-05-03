@@ -1,0 +1,733 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.sunny.mentalhealthcare.fragment.ExerciseYoga">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Yoga"
+                android:textAllCaps="true"
+                android:layout_marginStart="12dp"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.06"
+                android:fontFamily="@font/bigshot_one"
+                android:textColor="#457700"
+                android:padding="3dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="There’s nothing like the serenity, bliss, and relaxation that can come following a good yoga session.\nOne of the primary reasons for this sense of upliftment is that exercise naturally increases serotonin levels in our brains."
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="7dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/tienne"
+                android:textColor="@color/black"
+                android:padding="3dp"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:padding="4dp">
+
+                <ImageView
+                    android:id="@+id/yog"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentEnd="true"
+                    android:padding="6dp"
+                    android:src="@drawable/yoga" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_toStartOf="@id/yog"
+                    android:text="Seratonin is a neurotransmitter that makes us feel good. Unfortunately, it’s often deficient in people who suffer from depressive disorders."
+                    android:layout_marginStart="9dp"
+                    android:textSize="17sp"
+                    android:fontFamily="@font/alatsi"
+                    android:textColor="#AA3102"
+                    android:padding="3dp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Yoga isn’t like other forms of exercise. In fact, it takes a unique, relaxed approach to fitness that comes in contrast to many upbeat, intense, modern workout classes."
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="4dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/tienne_bold"
+                android:textColor="@color/black"
+                android:padding="3dp"/>
+
+            <TextView
+                android:id="@+id/km1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="know more.."
+                android:gravity="end"
+                android:layout_marginEnd="50dp"
+                android:visibility="visible"
+                android:fontFamily="@font/aladin"
+                android:textColor="#457700" />
+            <TextView
+                android:id="@+id/close1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Close"
+                android:textSize="16dp"
+                android:gravity="end"
+                android:layout_marginTop="-10dp"
+                android:layout_marginEnd="50dp"
+                android:visibility="gone"
+                android:fontFamily="@font/aladin"
+                android:textColor="#457700" />
+
+            <LinearLayout
+                android:id="@+id/bnLL1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="7dp"
+                android:visibility="gone"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Benefits"
+                    android:textSize="21sp"
+                    android:fontFamily="@font/tienne_bold"
+                    android:textColor="#C69B01" />
+
+                <View
+                    android:id="@+id/lineV"
+                    android:layout_width="95dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="-6dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="#C69B01"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1. Meditation, visualization, and focusing on breathing can help with letting go of worry and fear."
+                    android:textSize="16sp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/tienne"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2. Allowing both the body and mind to gain a sense of calm and ease."
+                    android:textSize="16sp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/tienne"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3. Creates mental clarity and calmness."
+                    android:textSize="16sp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/tienne"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4. Relieves chronic stress patterns and mind."
+                    android:textSize="16sp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/tienne"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/exmY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="some of the examples are..."
+                    android:textSize="16sp"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/dm_serif_text"
+                    android:textColor="#7A0101"/>
+
+                <TextView
+                    android:id="@+id/likY"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/aladin"
+                    android:visibility="gone"
+                    android:text="Sukhasana,  Adho Mukha Svanasana, \nUrdhva Mukha Svanasana, \nSalamba Sarvangasana,  Uttanasana, \nBalasana,  Savasana"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/exp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="Explore more.."
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/aladin"
+                    android:textColor="@color/task_text_color"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sports"
+                android:textAllCaps="true"
+                android:layout_marginStart="12dp"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.06"
+                android:fontFamily="@font/bigshot_one"
+                android:textColor="#457700"
+                android:padding="3dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We all are well aware that sports and physical activities offer more than what we can imagine. Not only do they keep you energetic and physically active and keep your body in shape, but they also provide numerous mental health-related benefits."
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="7dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/tienne"
+                android:textColor="@color/black"
+                android:padding="3dp"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:padding="4dp">
+
+                <ImageView
+                    android:id="@+id/sports"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentEnd="true"
+                    android:padding="6dp"
+                    android:src="@drawable/sports"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_toStartOf="@id/sports"
+                   android:text="Sports and mental health are directly related. The more you are involved in sports, the better your mental health is. It provides a better standards of living and peace of mind."
+                    android:layout_marginStart="9dp"
+                    android:textSize="17sp"
+                    android:fontFamily="@font/alatsi"
+                    android:textColor="#AA3102"
+                    android:padding="3dp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:text="Sports play an indispensable role in improving mental health as it helps in overcoming stress, depression, and anxiety. It eventually helps you to be more happy and confident."
+                android:layout_marginTop="4dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/tienne_bold"
+                android:textColor="@color/black"
+                android:padding="3dp"/>
+
+            <TextView
+                android:id="@+id/km2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="know more.."
+                android:gravity="end"
+                android:layout_marginEnd="50dp"
+                android:visibility="visible"
+                android:fontFamily="@font/aladin"
+                android:textColor="#457700" />
+            <TextView
+                android:id="@+id/close2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Close"
+                android:textSize="16dp"
+                android:gravity="end"
+                android:layout_marginTop="-10dp"
+                android:layout_marginEnd="50dp"
+                android:visibility="gone"
+                android:fontFamily="@font/aladin"
+                android:textColor="#457700" />
+
+            <LinearLayout
+                android:id="@+id/bnLL2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="7dp"
+                android:visibility="gone"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Benefits"
+                    android:textSize="21sp"
+                    android:fontFamily="@font/tienne_bold"
+                    android:textColor="#C69B01" />
+
+                <View
+                    android:id="@+id/lineV1"
+                    android:layout_width="95dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="-6dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="#C69B01"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="1. Improved Quality of Sleep."
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/tienne"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2. It helps release hormones called endorphins that helps to reduce depression and anxiety."
+                    android:textSize="16sp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/tienne"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3. High Concentration and Focus."
+                    android:textSize="16sp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/tienne"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4. Better Resilience that gives more  confidence and energy."
+                    android:textSize="16sp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/tienne"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5. Improved social life and better mental growth ."
+                    android:textSize="16sp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/tienne"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dance"
+                android:textAllCaps="true"
+                android:layout_marginStart="12dp"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.06"
+                android:fontFamily="@font/bigshot_one"
+                android:textColor="#457700"
+                android:padding="3dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dancing has always been a part of our culture, from traditional rituals to celebrations, it is something that widely appeals to people from all walks of life."
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="7dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/tienne"
+                android:textColor="@color/black"
+                android:padding="3dp"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:padding="4dp">
+
+                <ImageView
+                    android:id="@+id/dance"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentEnd="true"
+                    android:padding="6dp"
+                    android:src="@drawable/dance"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_toStartOf="@id/dance"
+                    android:text="It is also highly associated with good physical health, but most people don’t know that dancing can  affect their mental health, too.\nMany mental health professional is still considering it the best way to understand and manage feelings of anxiety or depression."
+                    android:layout_marginStart="9dp"
+                    android:textSize="17sp"
+                    android:fontFamily="@font/alatsi"
+                    android:textColor="#AA3102"
+                    android:padding="3dp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:text="Whether it’s salsa, ballroom, folk, modern jazz, hip-hop, or just freestyle movements etc. Dancing is just one of many things that can help you practice a healthy and happy lifestyle."
+                android:layout_marginTop="4dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/tienne_bold"
+                android:textColor="@color/black"
+                android:padding="3dp"/>
+
+            <TextView
+                android:id="@+id/km3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="know more.."
+                android:gravity="end"
+                android:layout_marginEnd="50dp"
+                android:visibility="visible"
+                android:fontFamily="@font/aladin"
+                android:textColor="#457700" />
+            <TextView
+                android:id="@+id/close3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Close"
+                android:textSize="16dp"
+                android:gravity="end"
+                android:layout_marginTop="-10dp"
+                android:layout_marginEnd="50dp"
+                android:visibility="gone"
+                android:fontFamily="@font/aladin"
+                android:textColor="#457700" />
+
+            <LinearLayout
+                android:id="@+id/bnLL3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="7dp"
+                android:visibility="gone"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Benefits"
+                    android:textSize="21sp"
+                    android:fontFamily="@font/tienne_bold"
+                    android:textColor="#C69B01" />
+
+                <View
+                    android:id="@+id/lineV2"
+                    android:layout_width="95dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="-6dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="#C69B01"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="1. Dancing make person feels free, the body releases happy hormones like dopamine that eventually improves mood."
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/tienne"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2. It helps eliminate social anxiety."
+                    android:textSize="16sp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/tienne"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3. Reduces the chances of mental health disorders."
+                    android:textSize="16sp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/tienne"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4. In dancing, a person needs to be very focused on each changing movement thats boosts our memory."
+                    android:textSize="16sp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/tienne"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Running &amp; Walking"
+                android:textAllCaps="true"
+                android:layout_marginStart="12dp"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.06"
+                android:fontFamily="@font/bigshot_one"
+                android:textColor="#457700"
+                android:padding="3dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Running and walking don’t cost anything. You don’t need a gym or fancy equipment. You can simply step outside and go! You can run or walk anywhere, any time and with anyone."
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="9dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/tienne"
+                android:textColor="@color/black"
+                android:padding="3dp"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:padding="4dp">
+
+                <ImageView
+                    android:id="@+id/run"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentEnd="true"
+                    android:padding="6dp"
+                    android:src="@drawable/walk"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_toStartOf="@id/run"
+                    android:text="Running, jogging, and even walking increase blood flow to the brain and release natural mood-elevating compounds that helps to improve your mood and relieve stress"
+                    android:layout_marginStart="9dp"
+                    android:textSize="17sp"
+                    android:fontFamily="@font/alatsi"
+                    android:textColor="#AA3102"
+                    android:padding="3dp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:text="Running is certainly good for the body, but research evidence shows that it has many important benefits for the mind as well. Whether you're a casual runner or a dedicated marathoner, your regular running routine can produce a number of positive effects on your mental health."
+                android:layout_marginTop="4dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/tienne_bold"
+                android:textColor="@color/black"
+                android:padding="3dp"/>
+
+            <TextView
+                android:id="@+id/km4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="know more.."
+                android:gravity="end"
+                android:layout_marginEnd="50dp"
+                android:visibility="visible"
+                android:fontFamily="@font/aladin"
+                android:textColor="#457700" />
+            <TextView
+                android:id="@+id/close4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Close"
+                android:textSize="16dp"
+                android:gravity="end"
+                android:layout_marginTop="-10dp"
+                android:layout_marginEnd="50dp"
+                android:visibility="gone"
+                android:fontFamily="@font/aladin"
+                android:textColor="#457700" />
+
+            <LinearLayout
+                android:id="@+id/bnLL4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="7dp"
+                android:visibility="gone"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Benefits"
+                    android:textSize="21sp"
+                    android:fontFamily="@font/tienne_bold"
+                    android:textColor="#C69B01" />
+
+                <View
+                    android:id="@+id/lineV3"
+                    android:layout_width="95dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="-6dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="#C69B01"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="1. It enhances sleep. Lack of sleep can lead stress, anxiety, and depression."
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/tienne"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2. Running builds self-esteem like many others sports do."
+                    android:textSize="16sp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/tienne"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3. It boosts brain health."
+                    android:textSize="16sp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/tienne"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4. Running relieves stress. Jog might provide short-term stress relief."
+                    android:textSize="16sp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/tienne"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</ScrollView>

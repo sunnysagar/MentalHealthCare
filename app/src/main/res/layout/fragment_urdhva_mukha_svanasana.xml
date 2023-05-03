@@ -1,0 +1,244 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.sunny.mentalhealthcare.yoga.UrdhvaMukhaSvanasanaFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="12dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Urdhva Mukha Svanasana"
+            android:layout_marginTop="-9dp"
+            android:padding="6dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="23sp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/dm_serif_text"
+            android:textColor="#FB7A09"/>
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-7dp"
+            android:padding="6dp">
+
+            <TextView
+                android:id="@+id/def1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:text="This posture is a back-bending yoga asana that requires strength in the arms, shoulders and wrists, as well as flexibility in the back."
+                android:fontFamily="@font/tienne"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/def2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="It is an excellent pose for handling anxiety and depression."
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/tienne_bold"
+                android:textSize="16sp"
+                android:textColor="#B64002"
+                android:layout_below="@id/def1"/>
+
+            <TextView
+                android:id="@+id/def1.1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/def2"
+                android:layout_marginTop="3dp"
+                android:text="This position opens your heart, helping you to remove any pent-up emotions in your chest. "
+                android:fontFamily="@font/tienne_bold"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/def1.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/def1.1"
+                android:layout_marginTop="3dp"
+                android:text="It also works to regulate the respiratory system, bringing clarity to your heart and mind. "
+                android:fontFamily="@font/tienne_bold"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:id="@+id/pose"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/def1.2"
+                android:layout_centerInParent="true"
+                android:padding="7dp"
+                android:src="@drawable/urdhva_mukha" />
+
+
+            <RelativeLayout
+                android:id="@+id/toDo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pose"
+                android:layout_marginTop="7dp"
+                android:padding="2dp">
+
+                <ImageView
+                    android:id="@+id/can"
+                    android:layout_width="200dp"
+                    android:layout_height="220dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="-40dp"
+                    android:src="@drawable/can"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:id="@+id/toDotitl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/alfa_slab_one"
+                    android:text="How to do Upward-Facing Dog Pose"
+                    android:maxLines="2"
+                    android:textColor="#C89600"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="340dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/toDotitl"
+                    android:layout_marginTop="-3dp"
+                    android:background="#C89600"
+                    android:gravity="center_horizontal" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/can"
+                    android:layout_below="@id/view"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        android:id="@+id/toDo1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="1. Lie flat on your stomach on your yoga mat."
+                        android:textColor="@color/black" />
+
+
+                    <TextView
+                        android:id="@+id/toDo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toDo1"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="2. Keep the balls of your feet facing upward, with your toes pointing down."
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/toDo3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toDo2"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="3. Place your palms facing down on the mat near your shoulder blades."
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/toDo4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toDo3"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="4. Push into your palms to elevate your upper body, smoothly curving the spine."
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/toDo5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toDo4"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="5. Lift your chest and head while keeping your shoulders back and lengthen your body from head to toe."
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/toDo6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toDo5"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="6. Take a few deep breaths here before gently releasing the posture."
+                        android:textColor="@color/black" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/bn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toDo"
+                android:layout_marginStart="4dp"
+                android:text="Improves the lungs' breathing capacity and stimulates abdominal organs."
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/alatsi"
+                android:textColor="#46004A" />
+
+            <TextView
+                android:id="@+id/bn2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/bn1"
+                android:text="Helps to relieve mild depression, fatigue, and sciatica."
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/alatsi"
+                android:textColor="#46004A" />
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

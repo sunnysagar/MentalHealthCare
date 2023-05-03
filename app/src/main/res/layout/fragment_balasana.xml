@@ -1,0 +1,217 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.sunny.mentalhealthcare.yoga.BalasanaFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="12dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Balasana"
+            android:layout_marginTop="-9dp"
+            android:padding="6dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="23sp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/dm_serif_text"
+            android:textColor="#FB7A09"/>
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-7dp"
+            android:padding="6dp">
+
+            <TextView
+                android:id="@+id/def1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:text="Child’s pose is among yoga’s most restorative and comforting postures. Here, you enjoy the immense comfort that comes with being totally grounded."
+                android:fontFamily="@font/tienne"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/def2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The sense of being supported by the earth can provide great emotional comfort in times of anxiety and depression."
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/tienne_bold"
+                android:textSize="16sp"
+                android:textColor="#B64002"
+                android:layout_below="@id/def1"/>
+
+            <TextView
+                android:id="@+id/def1.1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/def2"
+                android:layout_marginTop="3dp"
+                android:text="It is very comforting pose and it also works to release tension in the spine, thus calming your nerves."
+                android:fontFamily="@font/tienne_bold"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/def1.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/def1.1"
+                android:layout_marginTop="3dp"
+                android:text="It is a counter asana for various asanas and is usually practiced before and after Sirsasana."
+                android:fontFamily="@font/tienne_bold"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:id="@+id/pose"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/def1.2"
+                android:layout_centerInParent="true"
+                android:padding="7dp"
+                android:src="@drawable/child_pose2" />
+
+
+            <RelativeLayout
+                android:id="@+id/toDo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pose"
+                android:layout_marginTop="7dp"
+                android:padding="2dp">
+
+                <ImageView
+                    android:id="@+id/can"
+                    android:layout_width="200dp"
+                    android:layout_height="220dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="-40dp"
+                    android:src="@drawable/can"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:id="@+id/toDotitl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/alfa_slab_one"
+                    android:text="How to do Child's Pose"
+                    android:maxLines="2"
+                    android:textColor="#C89600"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="215dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/toDotitl"
+                    android:layout_marginTop="-3dp"
+                    android:background="#C89600"
+                    android:gravity="center_horizontal" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/can"
+                    android:layout_below="@id/view"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        android:id="@+id/toDo1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="1. Kneel on your mat with your big toes touching and your knees slightly wider than your hips."
+                        android:textColor="@color/black" />
+
+
+                    <TextView
+                        android:id="@+id/toDo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toDo1"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="2. Bend forward, stretching your arms and chest forward."
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/toDo3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toDo2"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="3. Rest your head on your mat or a blanket with your arms stretched above your head."
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/toDo4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toDo3"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/tienne"
+                        android:text="4. Breathe deeply here for as long as you’d like before gently sitting back up."
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/bn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toDo"
+                android:layout_marginStart="4dp"
+                android:text="This asana helps release any tension in the chest. It is also why people trust yoga for better sleep."
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/alatsi"
+                android:textColor="#46004A" />
+
+            <TextView
+                android:id="@+id/bn2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/bn1"
+                android:text="It relaxes the back and spine and enables people to trust in yoga for good sleep."
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/alatsi"
+                android:textColor="#46004A" />
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

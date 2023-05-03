@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="2dp"
+    android:orientation="vertical"
+    tools:context="com.sunny.mentalhealthcare.activity.SignupActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_marginTop="15dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="8dp"
+            android:padding="4dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="245dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/logoa"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:contentDescription="TODO"
+                    tools:ignore="ContentDescription" />
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/white"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="#020820"
+                    android:padding="16dp"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:singleLine="true"
+                    android:hint="Name" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="@color/white"
+                    android:layout_marginTop="13dp"
+                    android:textStyle="bold"
+                    android:padding="16dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:background="#020820"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:hint="@string/email" />
+
+                <EditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/white"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="#020820"
+                    android:padding="16dp"
+                    android:singleLine="true"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:hint="Username" />
+
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/white"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="#020820"
+                    android:padding="16dp"
+                    android:singleLine="true"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:hint="Password" />
+
+
+                <ProgressBar
+                    android:id="@+id/progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal" />
+
+                <Button
+                    android:id="@+id/btnSignup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="30dp"
+                    android:padding="13dp"
+                    android:backgroundTint="@color/green_900"
+                    android:text="Sign Up"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+<!--                <Button-->
+<!--                    android:id="@+id/btnSignin"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:layout_marginLeft="21dp"-->
+<!--                    android:layout_marginRight="21dp"-->
+<!--                    android:layout_marginBottom="9dp"-->
+<!--                    android:padding="13dp"-->
+<!--                    android:backgroundTint="@color/orange_500"-->
+<!--                    android:text="Sign In"-->
+<!--                    android:textColor="#ffffff"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textSize="18sp"/>-->
+
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/or"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:textSize="25sp"-->
+<!--            android:text="or"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:layout_marginTop="2dp"-->
+<!--            android:layout_marginRight="15dp"-->
+<!--            android:layout_marginLeft="15dp"-->
+<!--            android:layout_below="@id/btnSignup"/>-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/sga"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:src="@drawable/g"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_marginTop="7dp"-->
+<!--            android:layout_below="@+id/or"-->
+<!--            android:contentDescription="TODO"-->
+<!--            tools:ignore="ContentDescription" />-->
+
+    </LinearLayout>
+
+
+</ScrollView>
