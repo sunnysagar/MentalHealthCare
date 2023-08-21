@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.sunny.mentalhealthcare.activity.BDI">
+    tools:context="com.sunny.mentalhealthcare.testClass.BDI">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"

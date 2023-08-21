@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#020820"
-    tools:context="com.sunny.mentalhealthcare.activity.Worry">
+    tools:context="com.sunny.mentalhealthcare.testClass.Worry">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"

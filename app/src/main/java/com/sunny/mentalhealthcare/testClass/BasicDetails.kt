@@ -1,4 +1,4 @@
-package com.sunny.mentalhealthcare.activity
+package com.sunny.mentalhealthcare.testClass
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -179,10 +180,6 @@ open class BasicDetails : AppCompatActivity() {
             if(name.isNotEmpty() && age.isNotEmpty() && mobile.isNotEmpty() && email.isNotEmpty() && job.isNotEmpty() && city.isNotEmpty() && state.isNotEmpty()
                 && tymOnPhone.isNotEmpty() && meetPeople.isNotEmpty() && feelToday.isNotEmpty() && fitness.isNotEmpty())
             {
-                val iintent = Intent(this, CheckUp::class.java)
-                iintent.putExtra(CheckUp.userId, mobile)
-                startActivity(iintent)
-
                 val user = mauth.currentUser
                 val emailId = user!!.email
                 val uId = user.uid
@@ -226,6 +223,26 @@ open class BasicDetails : AppCompatActivity() {
                 )
                 //You can't use special characters in your firebase node names that's why email as child not working
                 database.child(uId).child("username").setValue(detail)
+
+                val builder = AlertDialog.Builder(this@BasicDetails)
+                builder.setTitle("Confirmation")
+                    .setMessage("have to taken the test before?")
+                    .setPositiveButton("Yes"){_, _ ->
+
+                        val intent = Intent(this@BasicDetails, MainActivity::class.java)
+                        startActivity(intent)
+                        finish()
+
+
+                        Toast.makeText(this,"Hoping for your improvement!!",Toast.LENGTH_SHORT).show()
+                    }
+                    .setNegativeButton("No"){_, _ ->
+                        val intent = Intent(this, CheckUp::class.java)
+                        startActivity(intent)
+                        finish()
+                    }
+                    .create()
+                    .show()
 //                detail.forEach{database.child("Detail").push().key
 //                    it.mobile = database.key.toString()
 //                    database.child("detail").child(database.key).setValue(it)

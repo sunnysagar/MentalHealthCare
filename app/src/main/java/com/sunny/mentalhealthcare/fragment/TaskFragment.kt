@@ -163,10 +163,12 @@ class TaskFragment : Fragment() {
         musicMore.setOnClickListener {
             musicBenefit.visibility = View.VISIBLE
             musicMore.visibility = View.GONE
+            musicExp.visibility = View.VISIBLE
         }
         musicLess.setOnClickListener {
             musicBenefit.visibility = View.GONE
             musicMore.visibility = View.VISIBLE
+            musicExp.visibility = View.GONE
         }
         musicExp.setOnClickListener {
             startActivity(Intent(activity,AlbumActivity::class.java))

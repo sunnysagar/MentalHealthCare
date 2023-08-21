@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:clickable="true"
-    android:padding="5dp"
+    android:padding="8dp"
+    android:layout_margin="2dp"
     android:focusable="true"
     android:background="?android:attr/selectableItemBackground">
 
@@ -13,15 +14,36 @@
         android:layout_marginRight="10dp"
         android:layout_marginEnd="10dp"
         android:layout_centerVertical="true"
-        android:src="@drawable/music_placeholder"
+        android:src="@drawable/mp3"
         android:id="@+id/iv_artwork"/>
 
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/tit"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_toRightOf="@+id/iv_artwork"-->
+<!--        android:layout_toEndOf="@+id/iv_artwork">-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/tv_title"-->
+<!--            android:text="songs title"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textColor="@color/background_blue"-->
+<!--            android:textStyle="bold"-->
+<!--            android:paddingRight="50dp"-->
+<!--            android:paddingEnd="50dp"-->
+<!--           />-->
+
+<!--    </RelativeLayout>-->
+
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:id="@+id/tv_title"
         android:text="songs title"
         android:textSize="16sp"
+        android:textColor="@color/background_blue"
         android:textStyle="bold"
         android:paddingRight="50dp"
         android:paddingEnd="50dp"
@@ -33,9 +55,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:maxLines="2"
         android:layout_toRightOf="@+id/iv_artwork"
         android:layout_toEndOf="@+id/iv_artwork"
         android:text="Artiste"
+        android:textColor="@color/background_blue"
         android:layout_below="@+id/tv_title"
         android:id="@+id/tv_artist"/>
 
@@ -47,16 +71,31 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:id="@+id/tv_duration"
+        android:textColor="@color/background_blue"
         android:text="3:05" />
+
+    <ImageView
+        android:id="@+id/iv_play_inactive"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="0dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_duration"
+        android:src="@drawable/ic_play_circle_outline_white"
+        android:visibility="visible"/>
 
     <ImageView
         android:id="@+id/iv_play_active"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="0dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/tv_duration"
-        android:src="@drawable/ic_play_circle_outline_white"
+        android:src="@drawable/active_play"
         android:visibility="invisible"/>
 
 

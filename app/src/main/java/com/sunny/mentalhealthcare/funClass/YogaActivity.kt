@@ -1,4 +1,4 @@
-package com.sunny.mentalhealthcare.activity
+package com.sunny.mentalhealthcare.funClass
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

@@ -4,12 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/mus_back"
     tools:context="com.sunny.mentalhealthcare.music.SongsActivity">
+
+    <ImageView
+        android:id="@+id/imgview"
+        android:layout_width="290dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="9dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/recyclerview"
+        android:layout_below="@+id/imgview"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:paddingTop="10dp"
@@ -27,14 +41,28 @@
 
     </ProgressBar>
 
-    <com.example.jean.jcplayer.view.JcPlayerView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/jcplayer"
+        android:layout_margin="4dp"
+        app:cardBackgroundColor="#DABB84"
         android:layout_alignParentBottom="true"
-        android:visibility="gone">
+        android:padding="7dp"
+        app:cardCornerRadius="5dp">
+
+        <com.example.jean.jcplayer.view.JcPlayerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:id="@+id/jcplayer"
+            android:visibility="gone">
 
 
-    </com.example.jean.jcplayer.view.JcPlayerView>
+        </com.example.jean.jcplayer.view.JcPlayerView>
+
+
+    </androidx.cardview.widget.CardView>
+
+
 
 </RelativeLayout>

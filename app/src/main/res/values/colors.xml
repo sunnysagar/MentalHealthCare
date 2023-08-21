@@ -19,6 +19,8 @@
     <color name="background_blue">#020820</color>
     <color name="background_blue_light">#010F47</color>
     <color name="task_text_color">#E80202</color>
+    <color name="transparent">#00000000</color>
+    <color name="hover">#f50057</color>
 
 
 </resources>

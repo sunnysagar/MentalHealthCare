@@ -1,6 +1,5 @@
 package com.sunny.mentalhealthcare.activity
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -11,7 +10,6 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.view.GravityCompat
@@ -19,19 +17,13 @@ import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
-import com.sunny.mentalhealthcare.fragment.DoctorsConsult
-import com.sunny.mentalhealthcare.fragment.ExerciseYoga
-import com.sunny.mentalhealthcare.fragment.HomeFragment
-import com.sunny.mentalhealthcare.fragment.TaskFragment
+import com.sunny.mentalhealthcare.fragment.*
+import com.sunny.mentalhealthcare.loginClass.LoginActivity
+import com.sunny.mentalhealthcare.testClass.CheckUp
 import com.sunny.mentalhealthtracker.R
 import kotlinx.coroutines.NonCancellable
 
-
-open class CheckUp : AppCompatActivity() {
-
-    companion object{
-        const val userId = "mobile"
-    }
+class AfterTestActivity : AppCompatActivity() {
 
     private lateinit var drawerLayout: DrawerLayout
     lateinit var toolbar: androidx.appcompat.widget.Toolbar
@@ -41,14 +33,13 @@ open class CheckUp : AppCompatActivity() {
     var previousMenuItem : MenuItem? = null
 
     lateinit var mauth: FirebaseAuth
-    lateinit var database:DatabaseReference
+    lateinit var database: DatabaseReference
 
     var myUser : String = ""
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(com.sunny.mentalhealthtracker.R.layout.activity_check_up2)
+        setContentView(R.layout.activity_after_test)
 
         mauth = FirebaseAuth.getInstance()
         val user = mauth.currentUser
@@ -57,14 +48,14 @@ open class CheckUp : AppCompatActivity() {
 
         init()
 
-       // This  method is also user created to setup the toolbar
-       setUpToolbar()
+        // This  method is also user created to setup the toolbar
+        setUpToolbar()
 
-      //user created method to handle the action bar drawer toogle
+        //user created method to handle the action bar drawer toogle
         setupActionBarToggle(uId,emailId)
 
         /*This is method is created to display the home fragment inside the activity by default*/
-        displayHome()
+        displayHome2()
 
 //        actionBarDrawerToggle = ActionBarDrawerToggle(this, drawerLayout, com.sunny.mentalhealthtracker.R.string.nav_open, com.sunny.mentalhealthtracker.R.string.nav_close)
 //
@@ -80,7 +71,7 @@ open class CheckUp : AppCompatActivity() {
 
 
         // geeting and setting the string data for the further process
-        val userName = intent.getStringExtra(userId)
+        val userName = intent.getStringExtra(CheckUp.userId)
         myUser = userName.toString()
 
 
@@ -110,35 +101,19 @@ open class CheckUp : AppCompatActivity() {
 
                 /*Opening the home fragment*/
                 R.id.main -> {
-                    displayHome()
+                    displayHome2()
                     drawerLayout.closeDrawers()
                 }
 
                 /*Opening the doctor fragment*/
                 R.id.docs -> {
-                    //creating a confirmation dialog
-                    val builder = AlertDialog.Builder(this@CheckUp)
-                    builder.setTitle("Confirmation")
-                        .setMessage("are you sure to consult a doctor without taking a test?")
-                        .setPositiveButton("Yes"){_, _ ->
 
+                    val doctorFragment = DoctorsConsult()
+                    fragmentTransaction.replace(R.id.frame, doctorFragment)
+                    fragmentTransaction.commit()
 
-
-                            val doctorFragment = DoctorsConsult()
-                            fragmentTransaction.replace(R.id.frame, doctorFragment)
-                            fragmentTransaction.commit()
-
-                            supportActionBar?.title = "Doctor & Counsellor"
-                            drawerLayout.closeDrawers()
-                            Toast.makeText(this,"Okay! Your appointment will book in EMERGENCY QUOTA.",Toast.LENGTH_SHORT).show()
-                        }
-                        .setNegativeButton("No"){_, _ ->
-                            displayHome()
-                        }
-                        .create()
-                        .show()
-
-
+                    supportActionBar?.title = "Doctor & Counsellor"
+                    drawerLayout.closeDrawers()
 
                 }
 
@@ -169,7 +144,7 @@ open class CheckUp : AppCompatActivity() {
                 /*Exiting the application*/
                 R.id.logout -> {
                     mauth.signOut()
-                    Toast.makeText(this,"Thank You",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,"Thank You", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(applicationContext, LoginActivity::class.java))
                     finish()
                 }
@@ -195,6 +170,7 @@ open class CheckUp : AppCompatActivity() {
                 val txtUserName = findViewById<TextView>(R.id.txtHeader)
                 val txtUserAge = findViewById<TextView>(R.id.txtHeader1)
                 val txtUserPhone = findViewById<TextView>(R.id.txtHeader2)
+                val txtUserEmail = findViewById<TextView>(R.id.txtHeader3)
 
                 var name:String
                 var age:String
@@ -202,7 +178,7 @@ open class CheckUp : AppCompatActivity() {
 
                 database = FirebaseDatabase.getInstance().getReference("Users")
                 database.child(uId).addValueEventListener(
-                    object: ValueEventListener{
+                    object: ValueEventListener {
                         override fun onDataChange(snapshot: DataSnapshot) {
                             val it = snapshot
 
@@ -210,7 +186,8 @@ open class CheckUp : AppCompatActivity() {
                             {
                                 txtUserName.text = it.child("name").value as String
                                 txtUserAge.text = it.child("username").child("age").value as String
-                                txtUserPhone.text = emailId.toString()
+                                txtUserPhone.text = it.child("username").child("mobile").value as String
+                                txtUserEmail.text = emailId.toString()
                             }
                         }
 
@@ -229,7 +206,7 @@ open class CheckUp : AppCompatActivity() {
                 Handler().postDelayed(pendingRunnable, 50)
             }
 
-            }
+        }
 
         /*Adding the drawer toggle to the drawer layout*/
         drawerLayout.addDrawerListener(actionBarDrawerToggle)
@@ -265,8 +242,8 @@ open class CheckUp : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    private fun displayHome(){
-        val homeFragment = HomeFragment()
+    private fun displayHome2(){
+        val homeFragment = HomeFragment2()
         supportFragmentManager.beginTransaction()
             .replace(R.id.frame, homeFragment)
             .commit()
@@ -277,17 +254,10 @@ open class CheckUp : AppCompatActivity() {
     override fun onBackPressed() {
 
         when(supportFragmentManager.findFragmentById(R.id.frame)){
-            !is HomeFragment -> HomeFragment()
+            !is HomeFragment2 -> HomeFragment2()
 
             else -> super.onBackPressed()
         }
     }
-
-   // sending string data to the fragment
-    fun getMyData(): String {
-        return myUser
-    }
-
-
 
 }

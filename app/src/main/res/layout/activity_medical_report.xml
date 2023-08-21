@@ -8,22 +8,34 @@
     android:padding="15dp"
     tools:context="com.sunny.mentalhealthcare.activity.MedicalReport">
 
-    <TextView
-        android:id="@+id/mobile"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="value"
-        android:padding="15dp" />
+<!--    <TextView-->
+<!--        android:id="@+id/mobile"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:text="value"-->
+<!--        android:padding="15dp" />-->
 
     <Button
         android:id="@+id/btnGentr"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="320dp"
+        android:layout_height="120dp"
         android:layout_marginTop="19dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
         android:padding="12dp"
-        android:text="Generate Your Medical Report"
-        android:layout_centerInParent="true"
-        android:layout_below="@+id/mobile"/>
+        android:text="Download Your Report"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/green_900"
+        android:padding="12dp"
+        android:text="Back" />
+
 
 </RelativeLayout>

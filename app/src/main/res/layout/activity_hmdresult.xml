@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/sc1"
     android:orientation="vertical"
-    tools:context="com.sunny.mentalhealthcare.activity.HMDResult">
+    tools:context="com.sunny.mentalhealthcare.testClass.HMDResult">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
@@ -167,11 +167,10 @@
                 android:id="@+id/hmdbtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Next"
+                android:text="Generate Your Medical Report"
                 android:layout_marginBottom="25dp"
                 android:layout_margin="10dp"
                 android:padding="10dp"
-                android:textSize="20sp"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/green_900" />
 

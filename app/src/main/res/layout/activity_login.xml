@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="9dp"
     android:gravity="center"
-    tools:context="com.sunny.mentalhealthcare.activity.LoginActivity">
+    tools:context="com.sunny.mentalhealthcare.loginClass.LoginActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -98,7 +98,6 @@
                 android:layout_gravity="center"
                 android:textSize="16sp"
                 android:layout_marginTop="15dp"
-
                 android:padding="6dp"/>
 
 

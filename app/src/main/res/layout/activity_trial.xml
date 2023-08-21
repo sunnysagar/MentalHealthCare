@@ -1,49 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/drawerLayout"
     tools:context="com.sunny.mentalhealthcare.activity.TrialActivity">
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:id="@+id/coordinatorLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+<!--        &lt;!&ndash; Edit text for email id &ndash;&gt;-->
+<!--        <EditText-->
+<!--            android:id="@+id/editText1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_marginTop="18dp"-->
+<!--            android:layout_marginRight="22dp" />-->
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
+<!--        &lt;!&ndash; Edit text for email subject &ndash;&gt;-->
+<!--        <EditText-->
+<!--            android:id="@+id/editText2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/editText1"-->
+<!--            android:layout_alignLeft="@+id/editText1"-->
+<!--            android:layout_marginTop="20dp" />-->
+
+<!--        &lt;!&ndash; Edit text for email body &ndash;&gt;-->
+<!--        <EditText-->
+<!--            android:id="@+id/editText3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/editText2"-->
+<!--            android:layout_alignLeft="@+id/editText2"-->
+<!--            android:layout_marginTop="30dp" />-->
+
+<!--        &lt;!&ndash; text Views for label &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/textView1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignBaseline="@+id/editText1"-->
+<!--            android:layout_alignBottom="@+id/editText1"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:text="Send To:"-->
+<!--            android:textColor="#0F9D58" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/textView2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignBaseline="@+id/editText2"-->
+<!--            android:layout_alignBottom="@+id/editText2"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:text="Email Subject:"-->
+<!--            android:textColor="#0F9D58" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/textView3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignBaseline="@+id/editText3"-->
+<!--            android:layout_alignBottom="@+id/editText3"-->
+<!--            android:text="Email Body:"-->
+<!--            android:textColor="#0F9D58" />-->
+
+        <!-- Button to send email -->
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:elevation="0dp"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+            android:layout_marginLeft="76dp"
+            android:layout_marginTop="20dp"
+            android:onClick="buttonSendEmail"
+            android:text="Send email!!" />
 
-<!--     standard height of toolbar is 56dp-->
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/orange_500"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark"
-            app:layout_scrollFlags="scroll|enterAlways"/>
 
-        </com.google.android.material.appbar.AppBarLayout>
 
-        <FrameLayout
-            android:id="@+id/frame"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
-<!--        layout behavior will make sure to start the frameLayout just below the toolbar-->
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navigationView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:headerLayout="@layout/drawer_header"
-        app:menu="@menu/navigation_menu"
-        android:layout_gravity = "start"/>
-
-</androidx.drawerlayout.widget.DrawerLayout>
+</RelativeLayout>

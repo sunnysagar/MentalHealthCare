@@ -3,15 +3,16 @@ package com.sunny.mentalhealthcare.activity
 import android.Manifest.permission.READ_EXTERNAL_STORAGE
 import android.Manifest.permission.WRITE_EXTERNAL_STORAGE
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.sunny.mentalhealthcare.base.Interest
@@ -28,7 +29,7 @@ class MedicalReport : AppCompatActivity() {
     }
 
     lateinit var genrtBtn: Button
-    lateinit var phone: TextView
+//    lateinit var phone: TextView
     lateinit var mauth: FirebaseAuth
     lateinit var database: DatabaseReference
 
@@ -206,6 +207,12 @@ class MedicalReport : AppCompatActivity() {
                         val pdfConverter = PDFConverter()
                         pdfConverter.createPdf(this@MedicalReport, infoList, this@MedicalReport)
 
+//                        Handler().postDelayed ({
+//                            val intent = Intent(this@MedicalReport, CheckUp::class.java)
+//                            startActivity(intent)
+//                            finish()
+//                        },1100)
+
                     }
                      override fun onCancelled(error: DatabaseError) {
                         // Failed to read value
@@ -219,6 +226,14 @@ class MedicalReport : AppCompatActivity() {
 //
 //
 //
+        }
+
+        val btnh = findViewById<Button>(com.sunny.mentalhealthtracker.R.id.btnHome)
+
+        btnh.setOnClickListener {
+            val intent = Intent(this@MedicalReport, AfterTestActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 

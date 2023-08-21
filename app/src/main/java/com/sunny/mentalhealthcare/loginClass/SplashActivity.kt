@@ -1,4 +1,4 @@
-package com.sunny.mentalhealthcare.activity
+package com.sunny.mentalhealthcare.loginClass
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -10,6 +10,7 @@ import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.sunny.mentalhealthcare.activity.AfterTestActivity
 import com.sunny.mentalhealthtracker.R
 
 
@@ -53,7 +54,8 @@ class SplashActivity : AppCompatActivity() {
                 finish()
             }
             else{
-                val intent = Intent(this@SplashActivity, CheckUp::class.java)
+                val intent = Intent(this@SplashActivity, AfterTestActivity::class.java)
+//                val intent = Intent(this@SplashActivity, TrialActivity::class.java)
                 startActivity(intent)
                 finish()
             }

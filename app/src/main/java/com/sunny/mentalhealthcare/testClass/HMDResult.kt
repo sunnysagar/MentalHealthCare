@@ -1,4 +1,4 @@
-package com.sunny.mentalhealthcare.activity
+package com.sunny.mentalhealthcare.testClass
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -10,46 +10,44 @@ import androidx.appcompat.widget.Toolbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.sunny.mentalhealthcare.activity.MedicalReport
 import com.sunny.mentalhealthtracker.R
 
-
-class BDIResult : AppCompatActivity() {
+class HMDResult : AppCompatActivity() {
 
     companion object{
         const val userId = "mobile"
     }
 
-    lateinit var mauth:FirebaseAuth
-    lateinit var BDITs : TextView
-    lateinit var database: DatabaseReference
+    lateinit var mauth: FirebaseAuth
+
+    lateinit var database : DatabaseReference
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_bdiresult)
+        setContentView(R.layout.activity_hmdresult)
 
-        val toolbar = findViewById<Toolbar>(R.id.bdiRToolbar)
+        val toolbar = findViewById<Toolbar>(R.id.hmdRToolbar)
 
         setSupportActionBar(toolbar)
-        supportActionBar?.title = "BDI Result Score"
-
-
+        supportActionBar?.title = "HAM-D Result Score"
         mauth = FirebaseAuth.getInstance()
 
-        BDITs = findViewById(R.id.tss)
-        BDITs.text = intent.getStringExtra("-")
+       val HamDTs = findViewById<TextView>(R.id.tcs)
+        HamDTs.text = intent.getStringExtra("-")
 
-        val btn = findViewById<Button>(R.id.bdiNxt)
+        val btn = findViewById<Button>(R.id.hmdbtn)
 
         val userName = intent.getStringExtra(userId)
 
         btn.setOnClickListener {
 
+            val testScore = HamDTs.text as String
+
             val user = mauth.currentUser
             val emailId = user!!.email
             val uId = user.uid
-
-            val testScore = BDITs.text as String
 
             database = FirebaseDatabase.getInstance().getReference("Users")
             val updateData = database.child(uId).child("username")
@@ -59,20 +57,23 @@ class BDIResult : AppCompatActivity() {
             var level :String = ""
 
             when (score) {
-                in 1..10 -> level = "Normal"
-                in 11..16 -> level = "Mild Mood Disturbance"
-                in 17..20 -> level = "Clinical Depression"
-                in 21..30 -> level = "Moderate Depression"
-                in 31..40 -> level = "Severe Depression"
-                in 41..100 -> level = "Extreme Depression"
+                in 0..7 -> level = "Normal"
+                in 8..13 -> level = "Mild Depression"
+                in 14..18 -> level = "Moderate Depression"
+                in 19..22 -> level = "Severe Depression"
+                in 23..100 -> level = "Very Severe Depression"
             }
             updateData.child("test2DepressionLevel").setValue(level)
 
-            val intent = Intent(this,MedicalReport::class.java)
+//            if(testScore.toInt() in 0..7)
+//            {
+//                updateData.child("test2DepressionLevel").setValue("Normal")
+//            }
+
+            val intent = Intent(this, MedicalReport::class.java)
             intent.putExtra(MedicalReport.userId,userName)
             startActivity(intent)
             finish()
         }
-
     }
 }

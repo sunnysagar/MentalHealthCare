@@ -1,114 +1,76 @@
 package com.sunny.mentalhealthcare.activity
 
+
+
 import android.os.Bundle
-import android.view.MenuItem
-import android.widget.FrameLayout
-import androidx.appcompat.app.ActionBarDrawerToggle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import androidx.coordinatorlayout.widget.CoordinatorLayout
-import androidx.core.view.GravityCompat
-import androidx.drawerlayout.widget.DrawerLayout
-import com.google.android.material.navigation.NavigationView
-import com.sunny.mentalhealthcare.fragment.DoctorsConsult
-import com.sunny.mentalhealthcare.fragment.ExerciseYoga
 import com.sunny.mentalhealthtracker.R
+import java.util.*
+import javax.mail.*
+import javax.mail.internet.AddressException
+import javax.mail.internet.InternetAddress
+import javax.mail.internet.MimeMessage
 
 class TrialActivity : AppCompatActivity() {
-    lateinit var frame : FrameLayout
-    lateinit var coordinator: CoordinatorLayout
-    lateinit var drawer: DrawerLayout
-    lateinit var navigationview: NavigationView
-    lateinit var toolbar: Toolbar
 
-    var previousMenuItem: MenuItem?= null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_trial)
 
+//        val btn = findViewById<Button>(R.id.button)
+//
+//        btn.setOnClickListener {
+//
+//        }
+    }
 
+    fun buttonSendEmail(view: View) {
+        try {
+            val stringSenderEmail = "sunny.btech.cs19@iiitranchi.ac.in"
+            val stringReceiverEmail = "sunnysagar620@gmail.com"
+            val stringPasswordSenderEmail = "sunnysagar2789"
 
-        frame = findViewById(R.id.frame)
-        coordinator = findViewById(R.id.coordinatorLayout)
-        drawer = findViewById(R.id.drawerLayout)
-        navigationview = findViewById(R.id.navigationView)
-        toolbar = findViewById(R.id.toolbar)
-        setUpToolbar()
+            val stringHost = "smtp.gmail.com"
 
-        //adding open and closing funtion of hamburger icon
-        val actionBarDrawerToggle = ActionBarDrawerToggle(
-            this@TrialActivity,
-            drawer,
-            R.string.nav_open,
-            R.string.nav_close)
+            val properties = Properties()
 
-        //adding click listener to hamburger icon
-        drawer.addDrawerListener(actionBarDrawerToggle)
-        //sync to convert hamburger icon to back icon and vice versa
-        actionBarDrawerToggle.syncState()
+            properties["mail.smtp.host"] = stringHost
+            properties["mail.smtp.port"] = "465"
+            properties["mail.smtp.ssl.enable"] = "true"
+            properties["mail.smtp.auth"] = "true"
 
-        //set up the navigation listener
-        navigationview.setNavigationItemSelectedListener {
-
-            if(previousMenuItem != null)
-                previousMenuItem?.isChecked = false
-
-            it.isCheckable = true
-            it.isChecked = true
-
-            previousMenuItem = it
-
-            when(it.itemId)
-            {
-                R.id.docs-> {
-                    supportFragmentManager.beginTransaction()
-                        .replace(R.id.frame,DoctorsConsult())
-                        .addToBackStack("Doctors")
-                        .commit()
-
-                    supportActionBar?.title = "Doctor Consult"
-                    drawer.closeDrawers()
-//                    Toast.makeText(this, "Doctor Consult",Toast.LENGTH_SHORT).show()
+            val session = Session.getInstance(properties, object : Authenticator() {
+                override fun getPasswordAuthentication(): PasswordAuthentication {
+                    return PasswordAuthentication(stringSenderEmail, stringPasswordSenderEmail)
                 }
-                R.id.yoga-> {
-                    supportFragmentManager.beginTransaction()
-                        .replace(R.id.frame, ExerciseYoga())
-                        .addToBackStack("Yoga")
-                        .commit()
-                    supportActionBar?.title = "Exercise & Yoga"
-                    drawer.closeDrawers()
+            })
+
+            val mimeMessage = MimeMessage(session)
+            mimeMessage.addRecipient(Message.RecipientType.TO, InternetAddress(stringReceiverEmail))
+
+            mimeMessage.subject = "Subject: Appointment Notification"
+            mimeMessage.setText(
+                "Hello, \n Hope you are doing well! " +
+                        "\n\n contact your new patient as soon as possible " +
+                        "\n\n Thank you!\n Mental Health care Team"
+            )
+
+            val thread = Thread {
+                try {
+                    Transport.send(mimeMessage)
+                } catch (e: MessagingException) {
+                    e.printStackTrace()
                 }
             }
+            thread.start()
 
-            return@setNavigationItemSelectedListener true
+        } catch (e: AddressException) {
+            e.printStackTrace()
+        } catch (e: MessagingException) {
+            e.printStackTrace()
         }
-
-
-
-
     }
-
-   private fun setUpToolbar() {
-       setSupportActionBar(toolbar)
-       supportActionBar?.title = "Toolbar Title"
-
-       //Hamburger icon adding method
-       supportActionBar?.setHomeButtonEnabled(true)
-       supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
-        val id = item.itemId
-
-        if(id==android.R.id.home)
-        {
-            drawer.openDrawer(GravityCompat.START) //it'll open the nav from left of screen
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
-
 }

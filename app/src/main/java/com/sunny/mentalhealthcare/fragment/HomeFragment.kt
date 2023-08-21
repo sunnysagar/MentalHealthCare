@@ -9,8 +9,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.sunny.mentalhealthcare.activity.CheckUp
-import com.sunny.mentalhealthcare.activity.MainActivity
+import com.sunny.mentalhealthcare.testClass.CheckUp
+import com.sunny.mentalhealthcare.testClass.MainActivity
 import com.sunny.mentalhealthtracker.R
 
 class HomeFragment : Fragment() {

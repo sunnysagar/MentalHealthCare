@@ -1,4 +1,4 @@
-package com.sunny.mentalhealthcare.activity
+package com.sunny.mentalhealthcare.testClass
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
         s12 = findViewById(R.id.checkBox12)
         btn = findViewById(R.id.btn)
 
-        val symtoms = arrayOf(s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s12)
+        val symptoms = arrayOf(s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12)
 
         val userName = intent.getStringExtra(userId)
         usN = userName.toString()
@@ -79,11 +79,6 @@ class MainActivity : AppCompatActivity() {
         btn.setOnClickListener {
 
             var totalChecked : Int = 0
-            var result = StringBuilder()
-//            result.append("Selected Symptoms")
-
-//           val m =  mutableMapOf<String,String>()
-
 
             var sym1 : String = ""
             var sym2 : String = ""
@@ -98,9 +93,9 @@ class MainActivity : AppCompatActivity() {
             var sym11 : String = ""
             var sym12 : String = ""
 
-            for (i in symtoms.indices)
+            for (i in symptoms.indices)
             {
-                if(symtoms[i].isChecked) {
+                if(symptoms[i].isChecked) {
                     totalChecked++
                 }
 
@@ -157,8 +152,6 @@ class MainActivity : AppCompatActivity() {
 
                 updateSymptoms(sym1,sym2,sym3,sym4,sym5,sym6,sym7,sym8,sym9,sym10,sym11,sym12)
 
-//            database = FirebaseDatabase.getInstance().getReference("Details").child("8298403322")
-//            database.setValue(Details().symptomsList)
 
             if(totalChecked==0)
                 Toast.makeText(this, "select at least one", Toast.LENGTH_SHORT).show()
@@ -221,64 +214,7 @@ class MainActivity : AppCompatActivity() {
         database.child(uId).child("username").child("symptom11").setValue(symptom11)
         database.child(uId).child("username").child("symptom12").setValue(symptom12)
 
-//        val syms = arrayOf<String>(symptom1,symptom2,symptom3,symptom4,symptom5,symptom6,symptom7,symptom8,symptom9,symptom10,symptom11,symptom12)
-//
-//        var i = 0
-//        while (syms.isNotEmpty())
-//        {
-//            database.child(uId).child("username").child(syms[i]).setValue(syms[i])
-//            i++
-//        }
-
 
     }
-
-//    private fun colorMyText(inputText:String,startIndex:Int,endIndex:Int,textColor:Int): Spannable {
-//        val outPutColoredText: Spannable = SpannableString(inputText)
-//        outPutColoredText.setSpan(
-//            ForegroundColorSpan(textColor), startIndex, endIndex,
-//            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-//        )
-//        return outPutColoredText
-//
-//
-//        val str : String=""
-//        val spannableString = SpannableString(str)
-//
-//        // we can only use backgroundcolor
-//        // span with a spannableStringBuilder.
-//
-//        // we can only use backgroundcolor
-//        // span with a spannableStringBuilder.
-////        val spannableStringBuilder = SpannableStringBuilder(text2)
-//
-//        // It is used to set foreground color.
-//
-//        // It is used to set foreground color.
-//        val green = ForegroundColorSpan(Color.GREEN)
-//        val cyan = ForegroundColorSpan(Color.CYAN)
-//
-//        // It is used to set background color.
-//
-//        // It is used to set background color.
-//        val yellow = BackgroundColorSpan(Color.YELLOW)
-//
-//        // It is used to set the span to the string
-//
-//        // It is used to set the span to the string
-//        spannableString.setSpan(
-//            green,
-//            0, 13, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
-//        )
-//        spannableString.setSpan(
-//            cyan,
-//            40, 43, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
-//        )
-//
-//
-//        str(spannableString)
-//
-//    }
-
 
 }

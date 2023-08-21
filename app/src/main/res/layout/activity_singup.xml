@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="2dp"
     android:orientation="vertical"
-    tools:context="com.sunny.mentalhealthcare.activity.SignupActivity">
+    tools:context="com.sunny.mentalhealthcare.loginClass.SignupActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

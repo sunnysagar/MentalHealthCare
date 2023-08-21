@@ -5,11 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="8dp"
+    android:orientation="vertical"
     tools:context="com.sunny.mentalhealthcare.music.AlbumActivity">
+
+    <ImageView
+        android:layout_width="320dp"
+        android:layout_height="270dp"
+        android:src="@drawable/mp3"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/faster_one"
+        android:padding="2dp"
+        android:text="Music  Hub"
+        android:textAllCaps="true"
+        android:textColor="@color/background_blue"
+        android:textSize="31sp"
+        android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
         android:id="@+id/recyclerview_id" >
 
     </androidx.recyclerview.widget.RecyclerView>

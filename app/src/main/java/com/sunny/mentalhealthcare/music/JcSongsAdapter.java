@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -21,7 +22,7 @@ public class JcSongsAdapter  extends RecyclerView.Adapter<JcSongsAdapter.SongsAd
     private  int seletedPosition;
     Context context ;
     List<GetSongs> arraylistSongs;
-    private  RecyclerItemClickListener listener;
+    private final RecyclerItemClickListener listener;
 
     public JcSongsAdapter(Context context, List<GetSongs> arraylistSongs, RecyclerItemClickListener listener) {
         this.context = context;
@@ -48,16 +49,19 @@ public class JcSongsAdapter  extends RecyclerView.Adapter<JcSongsAdapter.SongsAd
 
         if(getSongs != null){
             if(seletedPosition == position){
-                holder.itemView.setBackgroundColor(ContextCompat.getColor(context,R.color.green_900));
+//                holder.itemView.setBackgroundColor(ContextCompat.getColor(context,R.color.hover));
+                holder.tv_title.setTextColor(ContextCompat.getColor(context,R.color.hover));
                 holder.iv_play_active.setVisibility(View.VISIBLE);
+                holder.iv_play_Inactive.setVisibility(View.INVISIBLE);
             }else {
-                holder.itemView.setBackgroundColor(ContextCompat.getColor(context,R.color.black));
+                holder.itemView.setBackgroundColor(ContextCompat.getColor(context,R.color.transparent));
                 holder.iv_play_active.setVisibility(View.INVISIBLE);
             }
 
         }
 
 
+        assert getSongs != null;
         holder.tv_title.setText(getSongs.getSongTitle());
         holder.tv_artist.setText(getSongs.getArtist());
         String duration = Utility.convertDuration(Long.parseLong(getSongs.getSongDuration()));
@@ -72,17 +76,24 @@ public class JcSongsAdapter  extends RecyclerView.Adapter<JcSongsAdapter.SongsAd
         return arraylistSongs.size();
     }
 
-    public class SongsAdapterViewHolder extends RecyclerView.ViewHolder{
+    public static class SongsAdapterViewHolder extends RecyclerView.ViewHolder{
 
-        private TextView tv_title, tv_artist, tv_duration;
+        private final TextView tv_title;
+        private final TextView tv_artist;
+        private final TextView tv_duration;
+
+        RelativeLayout tit;
         ImageView iv_play_active;
+        ImageView iv_play_Inactive;
         public SongsAdapterViewHolder(@NonNull View itemView) {
             super(itemView);
 
             tv_title = itemView.findViewById(R.id.tv_title);
             tv_artist = itemView.findViewById(R.id.tv_artist);
             tv_duration = itemView.findViewById(R.id.tv_duration);
+            iv_play_Inactive = itemView.findViewById(R.id.iv_play_inactive);
             iv_play_active = itemView.findViewById(R.id.iv_play_active);
+//            tit = itemView.findViewById(R.id.tit);
 
 
         }

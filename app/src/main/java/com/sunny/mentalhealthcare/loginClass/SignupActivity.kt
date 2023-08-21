@@ -1,4 +1,4 @@
-package com.sunny.mentalhealthcare.activity
+package com.sunny.mentalhealthcare.loginClass
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -141,13 +141,27 @@ class SignupActivity : AppCompatActivity() {
             val user = mauth.currentUser
             val email = user!!.email
             val uId = user.uid
-            database = FirebaseDatabase.getInstance().getReference("Users")
-            val User = Users(name,email,uId,userName)
-            database.child(uId).setValue(User)
-                progressBar.visibility = View.GONE
-                Toast.makeText(this@SignupActivity,"Success",Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this@SignupActivity, BasicDetails::class.java))
-                finish()
+                // Email verification
+                user.sendEmailVerification()
+                    .addOnSuccessListener {
+                    database = FirebaseDatabase.getInstance().getReference("Users")
+                    val User = Users(name,email,uId,userName)
+                    database.child(uId).setValue(User)
+                        progressBar.visibility = View.GONE
+                        Toast.makeText(this@SignupActivity,"Please check your Email for verification!",Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(this@SignupActivity, NewLoginActivity::class.java))
+                        finish()
+                }
+                    .addOnFailureListener{
+                        Toast.makeText(this@SignupActivity,"Please verify your Email first!",Toast.LENGTH_SHORT).show()
+                    }
+
+
+
+
+
+//                startActivity(Intent(this@SignupActivity, BasicDetails::class.java))
+
         }.addOnFailureListener{
 
                 Toast.makeText(this@SignupActivity,"${it.message}",Toast.LENGTH_SHORT).show()
@@ -223,4 +237,5 @@ class SignupActivity : AppCompatActivity() {
 //        }
 //
 //    }
+
 }

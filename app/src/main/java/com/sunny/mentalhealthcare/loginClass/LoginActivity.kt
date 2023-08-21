@@ -1,4 +1,4 @@
-package com.sunny.mentalhealthcare.activity
+package com.sunny.mentalhealthcare.loginClass
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,6 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
+import com.sunny.mentalhealthcare.testClass.CheckUp
 import com.sunny.mentalhealthtracker.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -35,12 +36,13 @@ class LoginActivity : AppCompatActivity() {
         password = findViewById(R.id.etPassword)
 
         val btnLogin = findViewById<Button>(R.id.btnLogin)
+        val reset = findViewById<TextView>(R.id.txtForgotPassword)
         val register = findViewById<TextView>(R.id.txtRegister)
 
         val useName = intent.getStringExtra("useName")
 
         btnLogin.setOnClickListener {
-            if(validateUsername() == true && validatePassword() == true)
+            if(validateUsername() && validatePassword())
             {
                 val email = emaill.text.toString()
                 val password = password.text.toString()
@@ -82,8 +84,13 @@ class LoginActivity : AppCompatActivity() {
 //            val intent = Intent(this, BasicDetails::class.java)
 //            startActivity(intent)
         }
+
+        reset.setOnClickListener {
+            startActivity(Intent(this, ForgetPassword::class.java))
+        }
+
         register.setOnClickListener {
-            startActivity(Intent(this,SignupActivity::class.java))
+            startActivity(Intent(this, SignupActivity::class.java))
         }
 
 
@@ -117,7 +124,17 @@ class LoginActivity : AppCompatActivity() {
             val result = firebaseAuth.signInWithEmailAndPassword(email,passwordd).await()
 //            Toast.makeText(this,"${result.user?.email}",Toast.LENGTH_SHORT).show()
 //            Log.d("AuthResult","${result.user?.email}")
-            startActivity(Intent(this@LoginActivity,CheckUp::class.java))
+
+            val verification = mauth.currentUser?.isEmailVerified
+            if (verification == true)
+            {
+                startActivity(Intent(this@LoginActivity, CheckUp::class.java))
+            }
+            if (verification== false)
+            {
+                Toast.makeText(this@LoginActivity,"Please verify your Email first!",Toast.LENGTH_SHORT).show()
+            }
+
             result
         }catch (e:Exception){
             withContext(Dispatchers.Main){

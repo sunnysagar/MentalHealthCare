@@ -1,4 +1,4 @@
-package com.sunny.mentalhealthcare.activity
+package com.sunny.mentalhealthcare.testClass
 
 import android.annotation.SuppressLint
 import android.content.Intent

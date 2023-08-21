@@ -4,7 +4,7 @@
     <string name="enter_password">Enter Password</string>
     <string name="enter_mobile_number_10_digit">Mobile Number</string>
     <string name="login">Login</string>
-    <string name="email">Enter the Email</string>
+    <string name="email">Email</string>
     <string name="forgot_password">Forget Password?</string>
     <string name="don_t_have_an_account_sign_up_now">New User?/sign up</string>
 
@@ -30,4 +30,5 @@
         Doctors helps us to fight these kind of problems through their suggestions and treatments.
     </string>
     <string name="depression_Def">Depression is different from regular mood changes and feelings about everyday life. The best way to treat by involving yourself in the task or activities.</string>
+    <string name="title_activity_after_test">AfterTest</string>
 </resources>

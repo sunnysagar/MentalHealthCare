@@ -39,7 +39,7 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-       <!-- it change the color of text on status bar-->
+        <!-- it change the color of text on status bar-->
         <item name="android:windowLightStatusBar">true</item>
         <!-- Customize your theme here. -->
     </style>
@@ -48,6 +48,15 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/orange_500</item>
         <item name="colorPrimaryDark">@color/orange_500</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="NoAction" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/orange_500</item>
+        <item name="colorPrimaryDark">#303135</item>
         <item name="colorAccent">@color/white</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

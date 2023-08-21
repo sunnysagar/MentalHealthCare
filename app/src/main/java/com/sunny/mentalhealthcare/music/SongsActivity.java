@@ -9,6 +9,7 @@ import android.annotation.SuppressLint;
 import android.app.PendingIntent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -22,7 +23,9 @@ import com.google.firebase.database.ValueEventListener;
 import com.sunny.mentalhealthtracker.R;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 public class SongsActivity extends AppCompatActivity {
 
@@ -35,6 +38,9 @@ public class SongsActivity extends AppCompatActivity {
     ValueEventListener valueEventListener;
     JcPlayerView jcPlayerView;
     ArrayList<JcAudio> jcAudios = new ArrayList<>();
+
+    private Upload upload;
+    ImageView img;
     private  int currentIndex ;
 
     @SuppressLint("MissingInflatedId")
@@ -48,6 +54,15 @@ public class SongsActivity extends AppCompatActivity {
         jcPlayerView = findViewById(R.id.jcplayer);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        img = findViewById(R.id.imgview);
+
+//        String songCat = upload.getSongsCategory();
+//
+//        if(Objects.equals(songCat, "Party Songs"))
+//        {
+//            img.setImageResource(R.drawable.cm);
+//        }
+
         jcPlayerView.setVisibility(View.VISIBLE);
         mupload = new ArrayList<>();
         recyclerView.setAdapter(adapter);
@@ -80,10 +95,32 @@ public class SongsActivity extends AppCompatActivity {
                 mupload.clear();
                 for(DataSnapshot dss: dataSnapshot.getChildren()){
                     GetSongs getSongs = dss.getValue(GetSongs.class);
+                    assert getSongs != null;
                     getSongs.setmKey(dss.getKey());
                     currentIndex = 0;
                     final String s = getIntent().getExtras().getString("songsCategory");
                     if(s.equals(getSongs.getSongsCategory())){
+                        String songCat = Arrays.toString(new String[]{"Love Songs", "Sad Songs", "Party Songs", "Motivational Songs", "God Songs"});
+                        if(Objects.equals(getSongs.getSongsCategory(), "Love Songs"))
+                        {
+                            img.setImageResource(R.drawable.love);
+                        }
+                        else if(Objects.equals(getSongs.getSongsCategory(), "Sad Songs"))
+                        {
+                            img.setImageResource(R.drawable.soulful);
+                        }
+                        else if(Objects.equals(getSongs.getSongsCategory(), "Party Songs"))
+                        {
+                            img.setImageResource(R.drawable.party);
+                        }
+                        else if(Objects.equals(getSongs.getSongsCategory(), "Motivational Songs"))
+                        {
+                            img.setImageResource(R.drawable.motival);
+                        }
+                        else if(Objects.equals(getSongs.getSongsCategory(), "God Songs"))
+                        {
+                            img.setImageResource(R.drawable.devot);
+                        }
                         mupload.add(getSongs);
                         checkin = true;
                         jcAudios.add(JcAudio.createFromURL(getSongs.getSongTitle(),getSongs.getSongLink()));

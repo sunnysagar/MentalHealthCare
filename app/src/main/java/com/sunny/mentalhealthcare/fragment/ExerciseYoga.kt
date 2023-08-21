@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.sunny.mentalhealthcare.activity.YogaActivity
+import com.sunny.mentalhealthcare.funClass.YogaActivity
 import com.sunny.mentalhealthtracker.R
 
 class ExerciseYoga : Fragment() {

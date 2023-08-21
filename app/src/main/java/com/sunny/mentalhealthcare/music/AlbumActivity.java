@@ -43,6 +43,7 @@ public class AlbumActivity extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance().getReference("uploads");
 
         mDatabase.addValueEventListener(new ValueEventListener() {
+            @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 

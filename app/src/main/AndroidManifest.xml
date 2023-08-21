@@ -21,23 +21,33 @@
         android:theme="@style/Theme.MY"
         tools:targetApi="31">
         <activity
+            android:name="com.sunny.mentalhealthcare.loginClass.NewLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.sunny.mentalhealthcare.loginClass.ForgetPassword"
+            android:exported="false" />
+        <activity
+            android:name="com.sunny.mentalhealthcare.activity.AfterTestActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar" />
+        <activity
             android:name="com.sunny.mentalhealthcare.music.SongsActivity"
             android:exported="false"
-            android:theme="@style/NoActionBar"/>
+            android:theme="@style/NoAction" />
         <activity
             android:name="com.sunny.mentalhealthcare.music.AlbumActivity"
             android:exported="false"
-            android:theme="@style/NoActionBar"/>
+            android:theme="@style/Theme.Splash" />
         <activity
-            android:name="com.sunny.mentalhealthcare.activity.PlaceActivity"
+            android:name="com.sunny.mentalhealthcare.funClass.PlaceActivity"
             android:exported="false"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name="com.sunny.mentalhealthcare.activity.MoviesActivity"
+            android:name="com.sunny.mentalhealthcare.funClass.MoviesActivity"
             android:exported="false"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name="com.sunny.mentalhealthcare.activity.YogaActivity"
+            android:name="com.sunny.mentalhealthcare.funClass.YogaActivity"
             android:exported="true"
             android:theme="@style/AppTheme" />
 
@@ -55,7 +65,7 @@
             android:name="com.sunny.mentalhealthcare.activity.MedicalReport"
             android:exported="true" />
         <activity
-            android:name="com.sunny.mentalhealthcare.activity.SplashActivity"
+            android:name="com.sunny.mentalhealthcare.loginClass.SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.Splash">
             <intent-filter>
@@ -69,36 +79,36 @@
             android:exported="true"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name="com.sunny.mentalhealthcare.activity.SignupActivity"
+            android:name="com.sunny.mentalhealthcare.loginClass.SignupActivity"
             android:exported="true" />
         <activity
-            android:name="com.sunny.mentalhealthcare.activity.LoginActivity"
+            android:name="com.sunny.mentalhealthcare.loginClass.LoginActivity"
             android:exported="true" />
         <activity
-            android:name="com.sunny.mentalhealthcare.activity.CheckUp"
+            android:name="com.sunny.mentalhealthcare.testClass.CheckUp"
             android:exported="true"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name="com.sunny.mentalhealthcare.activity.HMDResult"
+            android:name="com.sunny.mentalhealthcare.testClass.HMDResult"
             android:exported="false" />
         <activity
-            android:name="com.sunny.mentalhealthcare.activity.HAMD"
+            android:name="com.sunny.mentalhealthcare.testClass.HAMD"
             android:exported="false" />
         <activity
-            android:name="com.sunny.mentalhealthcare.activity.BDIResult"
+            android:name="com.sunny.mentalhealthcare.testClass.BDIResult"
             android:exported="true" />
         <activity
-            android:name="com.sunny.mentalhealthcare.activity.BDI"
+            android:name="com.sunny.mentalhealthcare.testClass.BDI"
             android:exported="true" />
         <activity
-            android:name="com.sunny.mentalhealthcare.activity.BasicDetails"
+            android:name="com.sunny.mentalhealthcare.testClass.BasicDetails"
             android:exported="true"
             android:theme="@style/Theme.MY" />
         <activity
-            android:name="com.sunny.mentalhealthcare.activity.Worry"
+            android:name="com.sunny.mentalhealthcare.testClass.Worry"
             android:exported="true" />
         <activity
-            android:name="com.sunny.mentalhealthcare.activity.MainActivity"
+            android:name="com.sunny.mentalhealthcare.testClass.MainActivity"
             android:exported="true" />
 
         <meta-data
